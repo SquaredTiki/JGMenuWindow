@@ -8,13 +8,19 @@ This project allows you to do this as you have an option to set a header view as
 
 Simply copy the required files to your project and initialise the controller like so:
 
-    	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
+    menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
 
 This will create the status item in the menu bar and set up all the actions for it. From there just set the properties you want like the `menuItems` and/or the `headerView`.
 
 The only other thing you need to do is in the `applicationDidResignActive:` method close the menu by adding the line:
 
     [menuController closeWindow];
+
+You can also receive delegate messages by subscribing to be the delegate like so:
+
+    [menuController setMenuDelegate:self];
+
+This allows you to know when a menu item has been selected.
 
 # Demo App
 
