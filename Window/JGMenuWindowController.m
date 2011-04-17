@@ -220,7 +220,12 @@
 - (void)resetMouseOverRowToAndClose:(NSNumber *)row {
 	mouseOverRow = [row intValue];
 	[itemsTable reloadData];
-	[self closeWindow];
+	if ([menuDelegate respondsToSelector:@selector(shouldCloseMenuAfterSelectingRow:)]) {
+		if ([menuDelegate shouldCloseMenuAfterSelectingRow:[row intValue]])
+			[self closeWindow];
+	} else {
+		[self closeWindow];
+	}
 }
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc {
@@ -237,10 +242,10 @@
 
 - (void)mouseDownAtLocation:(NSPoint)loc {
 	int row = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
-	if (row > 0) {
+	if (row >= 0) {
 		[self flashHighlightForRowThenClose:[NSNumber numberWithInt:row]];
 		JGMenuItem *selectedItem = [menuItems objectAtIndex:row];
-		[[selectedItem target] performSelector:[selectedItem action]];
+		[[selectedItem target] performSelector:[selectedItem action] withObject:selectedItem];
 	}
 }
 

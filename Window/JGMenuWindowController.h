@@ -18,6 +18,7 @@
 @optional
 - (void)menuWillOpen;
 - (void)menuWillClose;
+- (BOOL)shouldCloseMenuAfterSelectingRow:(int)row;
 
 @end
 
