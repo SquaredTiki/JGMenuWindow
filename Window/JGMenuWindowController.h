@@ -21,20 +21,24 @@
 
 
 @interface JGMenuWindowController : NSWindowController <NSWindowDelegate, TableDetectionDelegate> {	
-	NSStatusItem *statusItem; // The Primary Status Item
-	CustomStatusItemView *customStatusView; // The Custom view within the status item
+	@private /* PRIVATE VARIABLES */
 	
-	NSArray *menuItems; // An array of menuItems which can be set and which will be displayed
-	NSView *headerView; // An optional headerView to be displayed at the top of the menu in a similar way to spotlight
+	NSStatusItem *statusItem; // The Primary Status Item
+	CustomStatusItemView *customStatusView; // PRIVATE: The Custom view within the status item
 	
 	NSTableView *itemsTable; // PRIVATE: The table where the items are displaye
 	int mouseOverRow; // PRIVATE: Used to store which row the mouse is hovering over
 	
 	NSView *_headerView; // PRIVATE: The header view conainer
 	
-	id <JGMenuWindowDelegate> menuDelegate; // The delegate which will recieve the optional method calls
-
 	NSTimer *timer; // PRIVATE: Used for fade out.
+	
+	@public
+	
+	NSArray *menuItems; // An array of menuItems which can be set and which will be displayed
+	NSView *headerView; // An optional headerView to be displayed at the top of the menu in a similar way to spotlight
+	
+	id <JGMenuWindowDelegate> menuDelegate; // The delegate which will recieve the optional method calls
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
@@ -45,8 +49,6 @@
 
 + (NSString *)seperatorItem; // Add this to menuItems to get a seperator
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
-- (void)closeWindow;
-
-- (void)loadHeights;
+- (void)closeWindow; // Close window with fade out
 
 @end

@@ -8,6 +8,12 @@
 
 #import "JGMenuWindowController.h"
 
+@interface JGMenuWindowController()
+
+- (void)loadHeights;
+
+@end
+
 @implementation JGMenuWindowController
 @synthesize itemsTable, _headerView, menuDelegate;
 @dynamic menuItems, headerView;

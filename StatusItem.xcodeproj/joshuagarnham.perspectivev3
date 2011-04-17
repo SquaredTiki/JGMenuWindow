@@ -273,7 +273,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
+									<integer>7</integer>
+									<integer>3</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -314,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>AFF3FD911324BDE500BC980F</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>StatusItemAppDelegate.m</string>
+								<string>JGMenuWindowController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>AFF3FD921324BDE500BC980F</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>StatusItemAppDelegate.m</string>
+										<string>JGMenuWindowController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFB0C19C135B3A17009E9BFF</string>
+										<string>AFB0C1AA135B3B73009E9BFF</string>
 										<key>history</key>
 										<array>
 											<string>AFA4C5B21356DEE900C0D3CE</string>
@@ -345,9 +346,9 @@
 											<string>AFB0C184135B395A009E9BFF</string>
 											<string>AFB0C186135B395A009E9BFF</string>
 											<string>AFB0C187135B395A009E9BFF</string>
-											<string>AFB0C199135B3A17009E9BFF</string>
-											<string>AFB0C19A135B3A17009E9BFF</string>
-											<string>AFB0C19B135B3A17009E9BFF</string>
+											<string>AFB0C19E135B3AB3009E9BFF</string>
+											<string>AFB0C1A8135B3B73009E9BFF</string>
+											<string>AFB0C1A9135B3B73009E9BFF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -661,7 +662,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFB0C19D135B3A17009E9BFF</string>
 		<string>AFB0BF29135ACC8D009E9BFF</string>
 		<string>AFB0BF2A135ACC8D009E9BFF</string>
 		<string>/Users/joshuagarnham/Desktop/Projects/Obj-C/Tests/StatusItem/StatusItem.xcodeproj</string>
