@@ -42,8 +42,11 @@
 
 - (void)showTableView {
 	NSMutableArray *items = [[NSMutableArray alloc] init];
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < 6; i++) {
+		if (i==3)
+			[items addObject:[JGMenuWindowController seperatorItem]];
 		[items addObject:[NSString stringWithFormat:@"Result %i", i]];
+	}
 	[menuController setMenuItems:items];
 	[items release];
 }

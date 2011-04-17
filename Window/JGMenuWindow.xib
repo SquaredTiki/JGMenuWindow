@@ -67,7 +67,7 @@
 										<int key="NSCellFlags">-2080244224</int>
 										<int key="NSCellFlags2">134217728</int>
 										<string key="NSContents">I'm A Big Button</string>
-										<object class="NSFont" key="NSSupport" id="844781005">
+										<object class="NSFont" key="NSSupport">
 											<string key="NSName">LucidaGrande</string>
 											<double key="NSSize">13</double>
 											<int key="NSfFlags">1044</int>
@@ -140,7 +140,11 @@
 														<int key="NSCellFlags">337772096</int>
 														<int key="NSCellFlags2">2048</int>
 														<string key="NSContents">Text Cell</string>
-														<reference key="NSSupport" ref="844781005"/>
+														<object class="NSFont" key="NSSupport">
+															<string key="NSName">LucidaGrande</string>
+															<double key="NSSize">14</double>
+															<int key="NSfFlags">16</int>
+														</object>
 														<reference key="NSControlView" ref="625553557"/>
 														<object class="NSColor" key="NSBackgroundColor">
 															<int key="NSColorSpace">6</int>
@@ -496,11 +500,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_headerView</string>
 							<string>itemsTable</string>
+							<string>menuDelegate</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSView</string>
 							<string>NSTableView</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -509,6 +515,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_headerView</string>
 							<string>itemsTable</string>
+							<string>menuDelegate</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -519,6 +526,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">itemsTable</string>
 								<string key="candidateClassName">NSTableView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">menuDelegate</string>
+								<string key="candidateClassName">id</string>
 							</object>
 						</object>
 					</object>

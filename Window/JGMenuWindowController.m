@@ -34,6 +34,11 @@
 	return self;
 }
 
+
++ (NSString *)seperatorItem {
+	return @"--[SEPERATOR]--";
+}
+
 #pragma mark Handling changes to the window
 
 - (void)closeWindow {
@@ -119,9 +124,20 @@
 	
 	int sizeOfCellsInTableView = 0;
 	
-	if ([menuItems count] != 0) {
-		sizeOfCellsInTableView = (20 * [menuItems count]) + 6;
+//	if ([menuItems count] != 0) {
+//		sizeOfCellsInTableView = (20 * [menuItems count]) + 6;
+//	}
+	
+	for (NSString *string in menuItems) {
+		if ([string isEqualToString:@"--[SEPERATOR]--"]) {
+			sizeOfCellsInTableView = sizeOfCellsInTableView + 12;
+		} else {
+			sizeOfCellsInTableView = sizeOfCellsInTableView + 20;
+		}
 	}
+	
+	if ([menuItems count] != 0)
+		sizeOfCellsInTableView = sizeOfCellsInTableView + 6;
 	
 	// Adjust what will be window frame
 			
@@ -190,10 +206,18 @@
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
+	if ([[menuItems objectAtIndex:rowIndex] isEqualToString:@"--[SEPERATOR]--"])
+		return @"";
 	return [menuItems objectAtIndex:rowIndex];
 }
 
 #pragma mark NSTableViewDelegate
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)rowIndex {
+	if ([[menuItems objectAtIndex:rowIndex] isEqualToString:@"--[SEPERATOR]--"])
+		return 10;
+	return 18;
+}
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
 	if ([menuDelegate respondsToSelector:@selector(didSelectMenuItemAtIndex:)])
@@ -203,6 +227,17 @@
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {	
+	if ([[menuItems objectAtIndex:rowIndex] isEqualToString:@"--[SEPERATOR]--"]) {
+		NSRect rowRect = [aTableView rectOfRow:rowIndex];
+		rowRect.origin.x = 1;
+		rowRect.origin.y += (int) (NSHeight(rowRect)/2);
+		rowRect.size.width = rowRect.size.width - 2;
+		rowRect.size.height = 1.0;
+		[[NSColor colorWithDeviceWhite:0.871 alpha:1.000] set];
+		NSRectFill(rowRect);
+		return;
+	}
+	
 	if (mouseOverRow == rowIndex && ([aTableView selectedRow] != rowIndex)) {
 		if ([aTableView lockFocusIfCanDraw]) {
 			NSRect rowRect = [aTableView rectOfRow:rowIndex];
@@ -216,7 +251,7 @@
 			  nil]
 			 autorelease];
 			NSRect rectToDraw = NSIntersectionRect(rowRect, columnRect);
-			rectToDraw.size.height = 18;
+			rectToDraw.size.height = 19;
 			rectToDraw.origin.y = rectToDraw.origin.y + 1;
 			[aGradient drawInRect:rectToDraw angle:90];
 			[aTableView unlockFocus];

@@ -43,6 +43,8 @@
 @property (nonatomic, retain) NSView *headerView;
 @property (nonatomic, retain) id <JGMenuWindowDelegate> menuDelegate;
 
++ (NSString *)seperatorItem; // Add this to menuItems to get a seperator
+
 - (void)loadHeights;
 - (void)closeWindow;
 
