@@ -10,15 +10,15 @@
 	256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {852, 532}}";
-			sepNavSelRange = "{283, 0}";
-			sepNavVisRange = "{0, 477}";
+			sepNavSelRange = "{305, 0}";
+			sepNavVisRange = "{0, 499}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1083, 832}}";
-			sepNavSelRange = "{1164, 0}";
-			sepNavVisRange = "{469, 1093}";
+			sepNavIntBoundsRect = "{{0, 0}, {1083, 949}}";
+			sepNavSelRange = "{1376, 0}";
+			sepNavVisRange = "{575, 1050}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
@@ -30,8 +30,8 @@
 			8D1107260486CEB800E47090 /* StatusItem */,
 		);
 		breakpoints = (
-			AFE5C5751359F32500081B00 /* JGMenuWindowController.m:97 */,
-			AFB0C048135B0D2C009E9BFF /* JGMenuWindowController.m:261 */,
+			AFE5C5751359F32500081B00 /* JGMenuWindowController.m:100 */,
+			AFB0C048135B0D2C009E9BFF /* JGMenuWindowController.m:267 */,
 		);
 		codeSenseManager = AFF3FD791324B98400BC980F /* Code sense */;
 		executables = (
@@ -605,6 +605,16 @@
 			AFB0C3A0135B5ADD009E9BFF /* PBXTextBookmark */ = AFB0C3A0135B5ADD009E9BFF /* PBXTextBookmark */;
 			AFB0C3A2135B5AE8009E9BFF /* PBXTextBookmark */ = AFB0C3A2135B5AE8009E9BFF /* PBXTextBookmark */;
 			AFB0C3A3135B5AEE009E9BFF /* PBXTextBookmark */ = AFB0C3A3135B5AEE009E9BFF /* PBXTextBookmark */;
+			AFB0C3A4135B5CC0009E9BFF /* PBXTextBookmark */ = AFB0C3A4135B5CC0009E9BFF /* PBXTextBookmark */;
+			AFB0C3A5135B5CC0009E9BFF /* PBXTextBookmark */ = AFB0C3A5135B5CC0009E9BFF /* PBXTextBookmark */;
+			AFB0C3A6135B5CC0009E9BFF /* PBXTextBookmark */ = AFB0C3A6135B5CC0009E9BFF /* PBXTextBookmark */;
+			AFB0C3A7135B5CC0009E9BFF /* PBXTextBookmark */ = AFB0C3A7135B5CC0009E9BFF /* PBXTextBookmark */;
+			AFB0C3A8135B5CC0009E9BFF /* PBXTextBookmark */ = AFB0C3A8135B5CC0009E9BFF /* PBXTextBookmark */;
+			AFB0C3A9135B5CC0009E9BFF /* PBXTextBookmark */ = AFB0C3A9135B5CC0009E9BFF /* PBXTextBookmark */;
+			AFB0C3AA135B5CC0009E9BFF /* PBXTextBookmark */ = AFB0C3AA135B5CC0009E9BFF /* PBXTextBookmark */;
+			AFB0C3AD135B5CC1009E9BFF /* PBXTextBookmark */ = AFB0C3AD135B5CC1009E9BFF /* PBXTextBookmark */;
+			AFB0C3B1135B5CD3009E9BFF /* PBXTextBookmark */ = AFB0C3B1135B5CD3009E9BFF /* PBXTextBookmark */;
+			AFB0C3B3135B5CDB009E9BFF /* PBXTextBookmark */ = AFB0C3B3135B5CDB009E9BFF /* PBXTextBookmark */;
 			AFE5C5E61359F7F500081B00 = AFE5C5E61359F7F500081B00 /* PBXTextBookmark */;
 			AFE5C66F135A024800081B00 = AFE5C66F135A024800081B00 /* PBXTextBookmark */;
 			AFE5C670135A024800081B00 = AFE5C670135A024800081B00 /* PBXTextBookmark */;
@@ -717,7 +727,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 17";
 		rLen = 0;
-		rLoc = 666;
+		rLoc = 643;
 		rType = 0;
 		vrLen = 1248;
 		vrLoc = 0;
@@ -747,7 +757,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 21";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 230;
@@ -847,7 +857,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 21";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1223;
 		vrLoc = 230;
@@ -857,7 +867,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1244;
 		vrLoc = 230;
@@ -867,7 +877,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 1004;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 230;
@@ -897,7 +907,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 57";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 2763;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 1030;
@@ -907,7 +917,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 57";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 2763;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 1030;
@@ -937,7 +947,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 57";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 2763;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 1030;
@@ -947,7 +957,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 57";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 2763;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 1030;
@@ -957,7 +967,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 57";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 2763;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 1030;
@@ -977,7 +987,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 1004;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 230;
@@ -987,7 +997,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1332;
 		vrLoc = 230;
@@ -1017,7 +1027,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 57";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 2763;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 1030;
@@ -1027,7 +1037,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 56";
 		rLen = 0;
-		rLoc = 2626;
+		rLoc = 2726;
 		rType = 0;
 		vrLen = 930;
 		vrLoc = 1030;
@@ -1041,7 +1051,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 51";
 		rLen = 0;
-		rLoc = 2321;
+		rLoc = 2421;
 		rType = 0;
 		vrLen = 1293;
 		vrLoc = 2528;
@@ -1085,7 +1095,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 91";
 		rLen = 1;
-		rLoc = 3612;
+		rLoc = 3712;
 		rType = 0;
 		vrLen = 1400;
 		vrLoc = 1959;
@@ -1155,7 +1165,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 100";
 		rLen = 0;
-		rLoc = 3842;
+		rLoc = 3942;
 		rType = 0;
 		vrLen = 1486;
 		vrLoc = 2906;
@@ -1175,7 +1185,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1389;
 		vrLoc = 230;
@@ -1185,7 +1195,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 18";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 230;
@@ -1195,7 +1205,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 19";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 230;
@@ -1205,7 +1215,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 18";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1334;
 		vrLoc = 230;
@@ -1215,7 +1225,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1290;
 		vrLoc = 192;
@@ -1225,7 +1235,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1319;
 		vrLoc = 192;
@@ -1295,7 +1305,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 41";
 		rLen = 0;
-		rLoc = 1628;
+		rLoc = 1605;
 		rType = 0;
 		vrLen = 1540;
 		vrLoc = 50;
@@ -1305,7 +1315,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 100";
 		rLen = 0;
-		rLoc = 3842;
+		rLoc = 3942;
 		rType = 0;
 		vrLen = 1395;
 		vrLoc = 5010;
@@ -1315,7 +1325,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1475;
 		vrLoc = 4958;
@@ -1325,7 +1335,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 18";
 		rLen = 0;
-		rLoc = 454;
+		rLoc = 430;
 		rType = 0;
 		vrLen = 1546;
 		vrLoc = 50;
@@ -1335,7 +1345,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1505;
 		vrLoc = 4958;
@@ -1345,7 +1355,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1582;
 		vrLoc = 4958;
@@ -1355,7 +1365,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 184";
 		rLen = 0;
-		rLoc = 7683;
+		rLoc = 7881;
 		rType = 0;
 		vrLen = 1582;
 		vrLoc = 4958;
@@ -1395,7 +1405,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 18";
 		rLen = 0;
-		rLoc = 454;
+		rLoc = 430;
 		rType = 0;
 		vrLen = 1557;
 		vrLoc = 50;
@@ -1405,7 +1415,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
 		name = "StatusItemAppDelegate.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 305;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 0;
@@ -1415,7 +1425,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 995;
 		vrLoc = 594;
@@ -1425,7 +1435,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 594;
@@ -1435,7 +1445,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 594;
@@ -1455,7 +1465,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 382;
 		vrLoc = 722;
@@ -1465,7 +1475,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1088;
 		vrLoc = 594;
@@ -1475,7 +1485,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 184";
 		rLen = 0;
-		rLoc = 7683;
+		rLoc = 7881;
 		rType = 0;
 		vrLen = 1619;
 		vrLoc = 4923;
@@ -1485,7 +1495,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1623;
 		vrLoc = 4923;
@@ -1495,7 +1505,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1618;
 		vrLoc = 4923;
@@ -1505,7 +1515,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 382;
 		vrLoc = 722;
@@ -1515,7 +1525,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 678;
 		vrLoc = 5225;
@@ -1525,7 +1535,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1623;
 		vrLoc = 4923;
@@ -1575,7 +1585,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1088;
 		vrLoc = 594;
@@ -1585,7 +1595,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 825;
@@ -1595,7 +1605,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 825;
@@ -1605,7 +1615,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 825;
@@ -1615,7 +1625,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 678;
 		vrLoc = 5225;
@@ -1625,7 +1635,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 220;
 		vrLoc = 1473;
@@ -1635,7 +1645,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 1023;
 		vrLoc = 659;
@@ -1645,7 +1655,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1618;
 		vrLoc = 4923;
@@ -1655,7 +1665,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1614;
 		vrLoc = 4923;
@@ -1665,7 +1675,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1614;
 		vrLoc = 4923;
@@ -1675,7 +1685,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 220;
 		vrLoc = 1473;
@@ -1685,7 +1695,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 642;
 		vrLoc = 5054;
@@ -1695,7 +1705,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1617;
 		vrLoc = 4923;
@@ -1705,7 +1715,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1617;
 		vrLoc = 4923;
@@ -1735,7 +1745,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 606;
+		rLoc = 646;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 251;
@@ -1745,7 +1755,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1498;
 		vrLoc = 46;
@@ -1755,7 +1765,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1468;
 		vrLoc = 49;
@@ -1765,7 +1775,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 181";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1617;
 		vrLoc = 4923;
@@ -1775,7 +1785,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 182";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1591;
 		vrLoc = 4922;
@@ -1785,7 +1795,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 183";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1583;
 		vrLoc = 4922;
@@ -1795,7 +1805,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 182";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1582;
 		vrLoc = 4922;
@@ -1805,7 +1815,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 589;
 		vrLoc = 5054;
@@ -1815,7 +1825,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 4922;
@@ -1825,12 +1835,12 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1571;
 		vrLoc = 4922;
 	};
-	AFB0C048135B0D2C009E9BFF /* JGMenuWindowController.m:261 */ = {
+	AFB0C048135B0D2C009E9BFF /* JGMenuWindowController.m:267 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1842,7 +1852,7 @@
 		functionName = "-tableView:shouldSelectRow:";
 		hitCount = 4;
 		ignoreCount = 0;
-		lineNumber = 261;
+		lineNumber = 267;
 		location = StatusItem;
 		modificationTime = 324734477.356161;
 		originalNumberOfMultipleMatches = 1;
@@ -1853,7 +1863,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1557;
 		vrLoc = 4922;
@@ -1863,7 +1873,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1571;
 		vrLoc = 4922;
@@ -1873,7 +1883,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1571;
 		vrLoc = 4922;
@@ -1883,7 +1893,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 526;
 		vrLoc = 4959;
@@ -1893,7 +1903,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 180";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 526;
 		vrLoc = 4959;
@@ -1903,7 +1913,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 179";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1616;
 		vrLoc = 4922;
@@ -1913,7 +1923,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 38";
 		rLen = 0;
-		rLoc = 968;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1725;
 		vrLoc = 50;
@@ -1923,7 +1933,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 35";
 		rLen = 0;
-		rLoc = 968;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1562;
 		vrLoc = 50;
@@ -1955,7 +1965,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 23";
 		rLen = 0;
-		rLoc = 558;
+		rLoc = 535;
 		rType = 0;
 		vrLen = 1557;
 		vrLoc = 50;
@@ -1995,7 +2005,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 37";
 		rLen = 0;
-		rLoc = 968;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1569;
 		vrLoc = 50;
@@ -2005,7 +2015,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 43";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 1030;
@@ -2015,7 +2025,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 47";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 1109;
 		vrLoc = 1030;
@@ -2025,7 +2035,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 47";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 1056;
 		vrLoc = 1030;
@@ -2035,7 +2045,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 60";
 		rLen = 0;
-		rLoc = 1765;
+		rLoc = 1865;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 1153;
@@ -2045,7 +2055,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 60";
 		rLen = 0;
-		rLoc = 1765;
+		rLoc = 1865;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 194;
@@ -2055,7 +2065,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 40";
 		rLen = 0;
-		rLoc = 1528;
+		rLoc = 1628;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 194;
@@ -2065,7 +2075,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 40";
 		rLen = 0;
-		rLoc = 1528;
+		rLoc = 1628;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 194;
@@ -2075,7 +2085,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 49";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1671;
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 1228;
@@ -2085,7 +2095,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 41";
 		rLen = 0;
-		rLoc = 1531;
+		rLoc = 1631;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 1027;
@@ -2095,7 +2105,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 41";
 		rLen = 0;
-		rLoc = 1531;
+		rLoc = 1631;
 		rType = 0;
 		vrLen = 1167;
 		vrLoc = 1027;
@@ -2105,7 +2115,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 41";
 		rLen = 0;
-		rLoc = 1531;
+		rLoc = 1631;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 1153;
@@ -2115,7 +2125,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 48";
 		rLen = 0;
-		rLoc = 1783;
+		rLoc = 1883;
 		rType = 0;
 		vrLen = 1126;
 		vrLoc = 1030;
@@ -2125,7 +2135,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 48";
 		rLen = 0;
-		rLoc = 1783;
+		rLoc = 1883;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 1030;
@@ -2135,7 +2145,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 48";
 		rLen = 0;
-		rLoc = 1783;
+		rLoc = 1883;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 1030;
@@ -2145,7 +2155,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 48";
 		rLen = 0;
-		rLoc = 1783;
+		rLoc = 1883;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 1030;
@@ -2175,7 +2185,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1412;
 		vrLoc = 49;
@@ -2185,7 +2195,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 39";
 		rLen = 0;
-		rLoc = 1399;
+		rLoc = 1499;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 1030;
@@ -2195,7 +2205,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 169";
 		rLen = 0;
-		rLoc = 5749;
+		rLoc = 5849;
 		rType = 0;
 		vrLen = 1284;
 		vrLoc = 0;
@@ -2205,7 +2215,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 169";
 		rLen = 0;
-		rLoc = 5749;
+		rLoc = 5849;
 		rType = 0;
 		vrLen = 1320;
 		vrLoc = 3;
@@ -2215,7 +2225,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 169";
 		rLen = 0;
-		rLoc = 5749;
+		rLoc = 5849;
 		rType = 0;
 		vrLen = 538;
 		vrLoc = 746;
@@ -2225,7 +2235,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 176";
 		rLen = 0;
-		rLoc = 5963;
+		rLoc = 6161;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 4824;
@@ -2235,7 +2245,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 176";
 		rLen = 0;
-		rLoc = 5963;
+		rLoc = 6161;
 		rType = 0;
 		vrLen = 1244;
 		vrLoc = 4892;
@@ -2245,7 +2255,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 176";
 		rLen = 0;
-		rLoc = 5963;
+		rLoc = 6161;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 4824;
@@ -2255,7 +2265,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 161";
 		rLen = 0;
-		rLoc = 5475;
+		rLoc = 5575;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 4371;
@@ -2265,7 +2275,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 161";
 		rLen = 0;
-		rLoc = 5475;
+		rLoc = 5575;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 4371;
@@ -2275,7 +2285,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 161";
 		rLen = 0;
-		rLoc = 5475;
+		rLoc = 5575;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 4371;
@@ -2285,7 +2295,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 161";
 		rLen = 0;
-		rLoc = 5475;
+		rLoc = 5575;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 4824;
@@ -2295,7 +2305,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 46";
 		rLen = 0;
-		rLoc = 1630;
+		rLoc = 1607;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 182;
@@ -2305,7 +2315,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 161";
 		rLen = 0;
-		rLoc = 5467;
+		rLoc = 5567;
 		rType = 0;
 		vrLen = 1146;
 		vrLoc = 4477;
@@ -2315,7 +2325,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 213";
 		rLen = 0;
-		rLoc = 8204;
+		rLoc = 8402;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 5949;
@@ -2335,7 +2345,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 47";
 		rLen = 0;
-		rLoc = 931;
+		rLoc = 971;
 		rType = 0;
 		vrLen = 1367;
 		vrLoc = 230;
@@ -2345,7 +2355,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 216";
 		rLen = 0;
-		rLoc = 8189;
+		rLoc = 8387;
 		rType = 0;
 		vrLen = 1541;
 		vrLoc = 5949;
@@ -2355,7 +2365,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 217";
 		rLen = 0;
-		rLoc = 8201;
+		rLoc = 8399;
 		rType = 0;
 		vrLen = 1540;
 		vrLoc = 5949;
@@ -2365,7 +2375,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 217";
 		rLen = 0;
-		rLoc = 8201;
+		rLoc = 8399;
 		rType = 0;
 		vrLen = 1538;
 		vrLoc = 5951;
@@ -2375,7 +2385,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 217";
 		rLen = 0;
-		rLoc = 8201;
+		rLoc = 8399;
 		rType = 0;
 		vrLen = 583;
 		vrLoc = 5949;
@@ -2385,7 +2395,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 199";
 		rLen = 0;
-		rLoc = 7303;
+		rLoc = 7501;
 		rType = 0;
 		vrLen = 1399;
 		vrLoc = 5490;
@@ -2395,7 +2405,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 217";
 		rLen = 0;
-		rLoc = 8114;
+		rLoc = 8312;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 6237;
@@ -2405,7 +2415,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 217";
 		rLen = 0;
-		rLoc = 8081;
+		rLoc = 8279;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 6290;
@@ -2415,7 +2425,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 219";
 		rLen = 0;
-		rLoc = 8162;
+		rLoc = 8360;
 		rType = 0;
 		vrLen = 1502;
 		vrLoc = 6237;
@@ -2425,7 +2435,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 208";
 		rLen = 0;
-		rLoc = 7583;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1357;
 		vrLoc = 5647;
@@ -2435,7 +2445,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 132";
 		rLen = 0;
-		rLoc = 4002;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 3308;
@@ -2445,7 +2455,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 139";
 		rLen = 0;
-		rLoc = 4204;
+		rLoc = 4304;
 		rType = 0;
 		vrLen = 1252;
 		vrLoc = 3390;
@@ -2455,7 +2465,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 254";
 		rLen = 0;
-		rLoc = 8871;
+		rLoc = 9069;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 6809;
@@ -2465,7 +2475,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 257";
 		rLen = 0;
-		rLoc = 8922;
+		rLoc = 9120;
 		rType = 0;
 		vrLen = 1385;
 		vrLoc = 6942;
@@ -2475,7 +2485,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 246";
 		rLen = 0;
-		rLoc = 8487;
+		rLoc = 8685;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 6809;
@@ -2485,7 +2495,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 258";
 		rLen = 0;
-		rLoc = 9128;
+		rLoc = 9326;
 		rType = 0;
 		vrLen = 1478;
 		vrLoc = 6809;
@@ -2495,7 +2505,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 259";
 		rLen = 0;
-		rLoc = 9498;
+		rLoc = 9696;
 		rType = 0;
 		vrLen = 1575;
 		vrLoc = 6809;
@@ -2505,7 +2515,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 259";
 		rLen = 0;
-		rLoc = 9128;
+		rLoc = 9326;
 		rType = 0;
 		vrLen = 1631;
 		vrLoc = 6809;
@@ -2515,7 +2525,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 260";
 		rLen = 0;
-		rLoc = 9128;
+		rLoc = 9326;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 6913;
@@ -2525,7 +2535,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 259";
 		rLen = 0;
-		rLoc = 9128;
+		rLoc = 9326;
 		rType = 0;
 		vrLen = 548;
 		vrLoc = 7866;
@@ -2535,7 +2545,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 261";
 		rLen = 0;
-		rLoc = 9232;
+		rLoc = 9430;
 		rType = 0;
 		vrLen = 1484;
 		vrLoc = 6945;
@@ -2545,7 +2555,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 259";
 		rLen = 0;
-		rLoc = 9105;
+		rLoc = 9303;
 		rType = 0;
 		vrLen = 1413;
 		vrLoc = 7025;
@@ -2555,7 +2565,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 259";
 		rLen = 0;
-		rLoc = 9088;
+		rLoc = 9286;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 7101;
@@ -2565,7 +2575,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 259";
 		rLen = 0;
-		rLoc = 9086;
+		rLoc = 9284;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 7199;
@@ -2575,7 +2585,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 261";
 		rLen = 0;
-		rLoc = 9198;
+		rLoc = 9396;
 		rType = 0;
 		vrLen = 1321;
 		vrLoc = 7199;
@@ -2585,7 +2595,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 267";
 		rLen = 0;
-		rLoc = 9461;
+		rLoc = 9659;
 		rType = 0;
 		vrLen = 1417;
 		vrLoc = 7286;
@@ -2595,7 +2605,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9298;
+		rLoc = 9496;
 		rType = 0;
 		vrLen = 1415;
 		vrLoc = 7319;
@@ -2605,7 +2615,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9298;
+		rLoc = 9496;
 		rType = 0;
 		vrLen = 1411;
 		vrLoc = 7324;
@@ -2615,7 +2625,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9298;
+		rLoc = 9496;
 		rType = 0;
 		vrLen = 1415;
 		vrLoc = 7324;
@@ -2625,7 +2635,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9298;
+		rLoc = 9496;
 		rType = 0;
 		vrLen = 1415;
 		vrLoc = 7324;
@@ -2635,7 +2645,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9298;
+		rLoc = 9496;
 		rType = 0;
 		vrLen = 1387;
 		vrLoc = 7324;
@@ -2645,7 +2655,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9298;
+		rLoc = 9496;
 		rType = 0;
 		vrLen = 1412;
 		vrLoc = 7324;
@@ -2655,7 +2665,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9326;
+		rLoc = 9524;
 		rType = 0;
 		vrLen = 1420;
 		vrLoc = 7324;
@@ -2665,7 +2675,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9351;
+		rLoc = 9549;
 		rType = 0;
 		vrLen = 1407;
 		vrLoc = 7324;
@@ -2675,7 +2685,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 265";
 		rLen = 0;
-		rLoc = 9351;
+		rLoc = 9549;
 		rType = 0;
 		vrLen = 1411;
 		vrLoc = 7324;
@@ -2685,7 +2695,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 267";
 		rLen = 0;
-		rLoc = 9462;
+		rLoc = 9660;
 		rType = 0;
 		vrLen = 1462;
 		vrLoc = 7322;
@@ -2695,7 +2705,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 135";
 		rLen = 0;
-		rLoc = 4165;
+		rLoc = 4265;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 2957;
@@ -2705,7 +2715,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 135";
 		rLen = 2;
-		rLoc = 4163;
+		rLoc = 4263;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 3006;
@@ -2715,7 +2725,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 45";
 		rLen = 0;
-		rLoc = 1400;
+		rLoc = 1500;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 818;
@@ -2725,7 +2735,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 36";
 		rLen = 0;
-		rLoc = 1344;
+		rLoc = 1321;
 		rType = 0;
 		vrLen = 1060;
 		vrLoc = 215;
@@ -2735,7 +2745,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 37";
 		rLen = 0;
-		rLoc = 1343;
+		rLoc = 1320;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 280;
@@ -2785,7 +2795,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 23";
 		rLen = 22;
-		rLoc = 536;
+		rLoc = 513;
 		rType = 0;
 		vrLen = 1073;
 		vrLoc = 249;
@@ -2815,7 +2825,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 45";
 		rLen = 0;
-		rLoc = 1400;
+		rLoc = 1500;
 		rType = 0;
 		vrLen = 1469;
 		vrLoc = 7309;
@@ -2825,7 +2835,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 204";
 		rLen = 0;
-		rLoc = 6607;
+		rLoc = 6805;
 		rType = 0;
 		vrLen = 1057;
 		vrLoc = 5384;
@@ -2855,7 +2865,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1049;
+		rLoc = 1089;
 		rType = 0;
 		vrLen = 1197;
 		vrLoc = 860;
@@ -2875,7 +2885,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 23";
 		rLen = 22;
-		rLoc = 536;
+		rLoc = 513;
 		rType = 0;
 		vrLen = 1437;
 		vrLoc = 0;
@@ -2885,7 +2895,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 51";
 		rLen = 0;
-		rLoc = 1765;
+		rLoc = 1742;
 		rType = 0;
 		vrLen = 1529;
 		vrLoc = 249;
@@ -2895,7 +2905,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 47";
 		rLen = 0;
-		rLoc = 1713;
+		rLoc = 1690;
 		rType = 0;
 		vrLen = 1565;
 		vrLoc = 249;
@@ -2915,7 +2925,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 1049;
+		rLoc = 1089;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 906;
@@ -2925,7 +2935,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 52";
 		rLen = 0;
-		rLoc = 1049;
+		rLoc = 1089;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 962;
@@ -2935,7 +2945,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 56";
 		rLen = 0;
-		rLoc = 1109;
+		rLoc = 1149;
 		rType = 0;
 		vrLen = 1142;
 		vrLoc = 962;
@@ -2945,7 +2955,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 48";
 		rLen = 0;
-		rLoc = 1713;
+		rLoc = 1690;
 		rType = 0;
 		vrLen = 1561;
 		vrLoc = 249;
@@ -2985,7 +2995,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 48";
 		rLen = 0;
-		rLoc = 1764;
+		rLoc = 1741;
 		rType = 0;
 		vrLen = 1640;
 		vrLoc = 182;
@@ -2995,7 +3005,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 596;
+		rLoc = 573;
 		rType = 0;
 		vrLen = 1507;
 		vrLoc = 157;
@@ -3005,7 +3015,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 596;
+		rLoc = 573;
 		rType = 0;
 		vrLen = 1506;
 		vrLoc = 158;
@@ -3015,7 +3025,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 56";
 		rLen = 0;
-		rLoc = 1109;
+		rLoc = 1149;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 962;
@@ -3055,7 +3065,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 596;
+		rLoc = 573;
 		rType = 0;
 		vrLen = 1506;
 		vrLoc = 158;
@@ -3065,7 +3075,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 54";
 		rLen = 0;
-		rLoc = 1765;
+		rLoc = 1742;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 353;
@@ -3075,7 +3085,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 53";
 		rLen = 0;
-		rLoc = 1765;
+		rLoc = 1742;
 		rType = 0;
 		vrLen = 1527;
 		vrLoc = 352;
@@ -3105,7 +3115,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1253;
 		vrLoc = 31;
@@ -3115,7 +3125,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1317;
 		vrLoc = 3;
@@ -3125,7 +3135,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 46;
@@ -3199,7 +3209,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 39";
 		rLen = 0;
-		rLoc = 1078;
+		rLoc = 1055;
 		rType = 0;
 		vrLen = 1525;
 		vrLoc = 95;
@@ -3209,7 +3219,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 928;
+		rLoc = 968;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 1303;
@@ -3259,7 +3269,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 229";
 		rLen = 0;
-		rLoc = 7252;
+		rLoc = 7450;
 		rType = 0;
 		vrLen = 1565;
 		vrLoc = 6394;
@@ -3269,7 +3279,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 478;
+		rLoc = 455;
 		rType = 0;
 		vrLen = 1425;
 		vrLoc = 95;
@@ -3279,7 +3289,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 478;
+		rLoc = 455;
 		rType = 0;
 		vrLen = 1366;
 		vrLoc = 154;
@@ -3289,7 +3299,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 478;
+		rLoc = 455;
 		rType = 0;
 		vrLen = 1366;
 		vrLoc = 154;
@@ -3299,7 +3309,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 478;
+		rLoc = 455;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 309;
@@ -3308,7 +3318,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 261;
 		rType = 1;
 	};
 	AFB0C1EF135B4F39009E9BFF /* PBXTextBookmark */ = {
@@ -3316,7 +3326,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 237";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 509;
 		vrLoc = 6634;
@@ -3326,7 +3336,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 478;
+		rLoc = 455;
 		rType = 0;
 		vrLen = 1466;
 		vrLoc = 154;
@@ -3336,7 +3346,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 237";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 1371;
 		vrLoc = 6185;
@@ -3346,7 +3356,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 51";
 		rLen = 0;
-		rLoc = 928;
+		rLoc = 968;
 		rType = 0;
 		vrLen = 1060;
 		vrLoc = 1303;
@@ -3356,7 +3366,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 962;
+		rLoc = 1002;
 		rType = 0;
 		vrLen = 1259;
 		vrLoc = 900;
@@ -3366,7 +3376,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 962;
+		rLoc = 1002;
 		rType = 0;
 		vrLen = 1256;
 		vrLoc = 903;
@@ -3376,7 +3386,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 962;
+		rLoc = 1002;
 		rType = 0;
 		vrLen = 459;
 		vrLoc = 1488;
@@ -3400,7 +3410,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 261;
 		rType = 1;
 	};
 	AFB0C201135B4F5A009E9BFF /* PBXTextBookmark */ = {
@@ -3408,7 +3418,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 237";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 509;
 		vrLoc = 6634;
@@ -3418,7 +3428,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 962;
+		rLoc = 1002;
 		rType = 0;
 		vrLen = 1256;
 		vrLoc = 903;
@@ -3438,7 +3448,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 24";
 		rLen = 0;
-		rLoc = 478;
+		rLoc = 455;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 50;
@@ -3448,7 +3458,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 237";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 1095;
 		vrLoc = 194;
@@ -3548,7 +3558,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 147";
 		rLen = 0;
-		rLoc = 4002;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 414;
 		vrLoc = 3808;
@@ -3558,7 +3568,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 147";
 		rLen = 0;
-		rLoc = 4002;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 458;
 		vrLoc = 3770;
@@ -3578,7 +3588,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 147";
 		rLen = 0;
-		rLoc = 4002;
+		rLoc = 4102;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 3446;
@@ -3588,7 +3598,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 962;
+		rLoc = 1002;
 		rType = 0;
 		vrLen = 1270;
 		vrLoc = 902;
@@ -3598,7 +3608,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1004;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 937;
@@ -3608,7 +3618,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1004;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 937;
@@ -3618,7 +3628,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1004;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 984;
@@ -3628,7 +3638,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1004;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 277;
 		vrLoc = 1697;
@@ -3637,7 +3647,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 261;
 		rType = 1;
 	};
 	AFB0C22D135B5058009E9BFF /* PBXTextBookmark */ = {
@@ -3645,7 +3655,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 238";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 6554;
@@ -3655,7 +3665,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1004;
+		rLoc = 1044;
 		rType = 0;
 		vrLen = 1305;
 		vrLoc = 984;
@@ -3665,7 +3675,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 51";
 		rLen = 0;
-		rLoc = 1630;
+		rLoc = 1607;
 		rType = 0;
 		vrLen = 1500;
 		vrLoc = 332;
@@ -3735,7 +3745,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 6493;
@@ -3755,7 +3765,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 766;
+		rLoc = 806;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 1040;
@@ -3849,7 +3859,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 261;
 		rType = 1;
 	};
 	AFB0C24E135B514B009E9BFF /* PBXTextBookmark */ = {
@@ -3857,7 +3867,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 368;
 		vrLoc = 3804;
@@ -3877,7 +3887,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 3385;
@@ -3897,7 +3907,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 766;
+		rLoc = 806;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 1040;
@@ -3907,7 +3917,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 766;
+		rLoc = 806;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 938;
@@ -3917,7 +3927,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 368;
 		vrLoc = 3804;
@@ -3927,7 +3937,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 766;
+		rLoc = 806;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 1303;
@@ -3937,7 +3947,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 766;
+		rLoc = 806;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 938;
@@ -3987,7 +3997,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 766;
+		rLoc = 806;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 1303;
@@ -4024,7 +4034,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 3385;
@@ -4034,7 +4044,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 1305;
 		vrLoc = 3806;
@@ -4054,7 +4064,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 462;
 		vrLoc = 4649;
@@ -4064,7 +4074,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 1530;
 		vrLoc = 6238;
@@ -4084,7 +4094,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
 		name = "StatusItemAppDelegate.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 305;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 0;
@@ -4124,7 +4134,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 462;
 		vrLoc = 4649;
@@ -4231,7 +4241,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 766;
+		rLoc = 806;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 938;
@@ -4241,7 +4251,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1387;
 		vrLoc = 938;
@@ -4251,7 +4261,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 984;
@@ -4261,7 +4271,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 54";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 407;
 		vrLoc = 1687;
@@ -4303,7 +4313,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 984;
@@ -4377,7 +4387,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 261;
 		rType = 1;
 	};
 	AFB0C29D135B52C7009E9BFF /* PBXTextBookmark */ = {
@@ -4385,7 +4395,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 521;
 		vrLoc = 6593;
@@ -4405,7 +4415,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 234";
 		rLen = 0;
-		rLoc = 7473;
+		rLoc = 7671;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 6159;
@@ -4425,7 +4435,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 51";
 		rLen = 0;
-		rLoc = 1630;
+		rLoc = 1607;
 		rType = 0;
 		vrLen = 1500;
 		vrLoc = 332;
@@ -4435,7 +4445,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 984;
@@ -4445,7 +4455,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 54";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 1133;
@@ -4455,7 +4465,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 54";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 1133;
@@ -4465,7 +4475,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 54";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 1303;
@@ -4475,7 +4485,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 54";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 1539;
@@ -4499,7 +4509,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 247;
+		rLoc = 253;
 		rType = 1;
 	};
 	AFB0C2B2135B52FB009E9BFF /* PBXTextBookmark */ = {
@@ -4507,7 +4517,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 235";
 		rLen = 0;
-		rLoc = 7559;
+		rLoc = 7757;
 		rType = 0;
 		vrLen = 481;
 		vrLoc = 6647;
@@ -4527,7 +4537,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 242";
 		rLen = 0;
-		rLoc = 7680;
+		rLoc = 7878;
 		rType = 0;
 		vrLen = 1683;
 		vrLoc = 6887;
@@ -4537,7 +4547,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 54";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 1005;
 		rType = 0;
 		vrLen = 1242;
 		vrLoc = 1253;
@@ -4547,7 +4557,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1530;
 		vrLoc = 3;
@@ -4557,7 +4567,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 46;
@@ -4567,7 +4577,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 235";
 		rLen = 0;
-		rLoc = 7559;
+		rLoc = 7757;
 		rType = 0;
 		vrLen = 481;
 		vrLoc = 6647;
@@ -4577,7 +4587,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 550;
 		vrLoc = 740;
@@ -4614,7 +4624,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1490;
 		vrLoc = 46;
@@ -4624,7 +4634,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 242";
 		rLen = 0;
-		rLoc = 7680;
+		rLoc = 7878;
 		rType = 0;
 		vrLen = 1647;
 		vrLoc = 6887;
@@ -4634,7 +4644,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 91";
 		rLen = 0;
-		rLoc = 2470;
+		rLoc = 2570;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 1981;
@@ -4644,7 +4654,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 91";
 		rLen = 0;
-		rLoc = 2470;
+		rLoc = 2570;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 2010;
@@ -4654,7 +4664,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 550;
 		vrLoc = 740;
@@ -4664,7 +4674,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 91";
 		rLen = 0;
-		rLoc = 2470;
+		rLoc = 2570;
 		rType = 0;
 		vrLen = 530;
 		vrLoc = 2214;
@@ -4674,7 +4684,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 247";
 		rLen = 0;
-		rLoc = 7820;
+		rLoc = 8018;
 		rType = 0;
 		vrLen = 1587;
 		vrLoc = 6373;
@@ -4684,7 +4694,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 247";
 		rLen = 0;
-		rLoc = 7820;
+		rLoc = 8018;
 		rType = 0;
 		vrLen = 1428;
 		vrLoc = 6583;
@@ -4708,7 +4718,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 142;
+		rLoc = 145;
 		rType = 1;
 	};
 	AFB0C2D4135B5370009E9BFF /* PBXTextBookmark */ = {
@@ -4716,7 +4726,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 143";
 		rLen = 0;
-		rLoc = 3983;
+		rLoc = 4083;
 		rType = 0;
 		vrLen = 420;
 		vrLoc = 3751;
@@ -4726,7 +4736,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 143";
 		rLen = 0;
-		rLoc = 3983;
+		rLoc = 4083;
 		rType = 0;
 		vrLen = 1291;
 		vrLoc = 3324;
@@ -4766,7 +4776,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 92";
 		rLen = 0;
-		rLoc = 2609;
+		rLoc = 2709;
 		rType = 0;
 		vrLen = 1019;
 		vrLoc = 2127;
@@ -4796,7 +4806,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 46;
@@ -4806,7 +4816,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 46;
@@ -4816,7 +4826,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 94;
@@ -4826,7 +4836,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 143";
 		rLen = 0;
-		rLoc = 3983;
+		rLoc = 4083;
 		rType = 0;
 		vrLen = 420;
 		vrLoc = 3751;
@@ -4836,7 +4846,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 475;
 		vrLoc = 610;
@@ -4846,7 +4856,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1381;
 		vrLoc = 94;
@@ -4856,7 +4866,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
 		name = "StatusItemAppDelegate.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 305;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 0;
@@ -4906,7 +4916,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 477;
 		vrLoc = 610;
@@ -4936,7 +4946,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 28";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1381;
 		vrLoc = 94;
@@ -4946,7 +4956,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 157;
@@ -4956,7 +4966,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1464;
 		vrLoc = 191;
@@ -4976,7 +4986,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 27";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 546;
 		vrLoc = 567;
@@ -4986,7 +4996,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 692;
+		rLoc = 732;
 		rType = 0;
 		vrLen = 1371;
 		vrLoc = 231;
@@ -4996,7 +5006,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 692;
+		rLoc = 732;
 		rType = 0;
 		vrLen = 1350;
 		vrLoc = 252;
@@ -5006,7 +5016,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 692;
+		rLoc = 732;
 		rType = 0;
 		vrLen = 546;
 		vrLoc = 467;
@@ -5016,7 +5026,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 692;
+		rLoc = 732;
 		rType = 0;
 		vrLen = 1350;
 		vrLoc = 252;
@@ -5026,7 +5036,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 51";
 		rLen = 0;
-		rLoc = 1630;
+		rLoc = 1607;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 333;
@@ -5036,7 +5046,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 217";
 		rLen = 0;
-		rLoc = 6607;
+		rLoc = 6805;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 5618;
@@ -5076,7 +5086,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 692;
+		rLoc = 732;
 		rType = 0;
 		vrLen = 546;
 		vrLoc = 467;
@@ -5106,7 +5116,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 240";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7866;
 		rType = 0;
 		vrLen = 1565;
 		vrLoc = 6684;
@@ -5116,7 +5126,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 17";
 		rLen = 0;
-		rLoc = 454;
+		rLoc = 430;
 		rType = 0;
 		vrLen = 1522;
 		vrLoc = 249;
@@ -5126,7 +5136,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 692;
+		rLoc = 732;
 		rType = 0;
 		vrLen = 1377;
 		vrLoc = 251;
@@ -5136,7 +5146,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 18";
 		rLen = 0;
-		rLoc = 467;
+		rLoc = 507;
 		rType = 0;
 		vrLen = 1207;
 		vrLoc = 0;
@@ -5146,7 +5156,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 192;
@@ -5156,7 +5166,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
 		name = "StatusItemAppDelegate.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 305;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 0;
@@ -5166,7 +5176,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
 		name = "StatusItemAppDelegate.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 305;
 		rType = 0;
 		vrLen = 477;
 		vrLoc = 0;
@@ -5176,7 +5186,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
 		name = "StatusItemAppDelegate.h: 12";
 		rLen = 0;
-		rLoc = 283;
+		rLoc = 305;
 		rType = 0;
 		vrLen = 477;
 		vrLoc = 0;
@@ -5186,7 +5196,7 @@
 		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
 		name = "JGMenuWindowController.h: 17";
 		rLen = 0;
-		rLoc = 454;
+		rLoc = 430;
 		rType = 0;
 		vrLen = 1556;
 		vrLoc = 215;
@@ -5216,7 +5226,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 5752;
@@ -5236,7 +5246,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 192;
@@ -5246,7 +5256,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 192;
@@ -5256,7 +5266,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 1159;
 		vrLoc = 231;
@@ -5276,7 +5286,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 460;
 		vrLoc = 324;
@@ -5286,7 +5296,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 30";
 		rLen = 9;
-		rLoc = 745;
+		rLoc = 785;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 231;
@@ -5336,7 +5346,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 22";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 611;
 		rType = 0;
 		vrLen = 460;
 		vrLoc = 324;
@@ -5366,7 +5376,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 5752;
@@ -5376,7 +5386,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 1058;
 		vrLoc = 5521;
@@ -5386,7 +5396,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 1001;
 		vrLoc = 5579;
@@ -5396,7 +5406,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 991;
 		vrLoc = 5681;
@@ -5416,7 +5426,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 386;
 		vrLoc = 6193;
@@ -5426,7 +5436,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 991;
 		vrLoc = 5681;
@@ -5466,7 +5476,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 386;
 		vrLoc = 6193;
@@ -5546,7 +5556,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 224";
 		rLen = 0;
-		rLoc = 6942;
+		rLoc = 7140;
 		rType = 0;
 		vrLen = 1147;
 		vrLoc = 157;
@@ -5635,7 +5645,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 43";
 		rLen = 0;
-		rLoc = 1164;
+		rLoc = 1204;
 		rType = 0;
 		vrLen = 1093;
 		vrLoc = 469;
@@ -5654,7 +5664,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 1;
-		rLoc = 231;
+		rLoc = 237;
 		rType = 1;
 	};
 	AFB0C35E135B588C009E9BFF /* PBXTextBookmark */ = {
@@ -5662,7 +5672,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 226";
 		rLen = 0;
-		rLoc = 6946;
+		rLoc = 7144;
 		rType = 0;
 		vrLen = 1222;
 		vrLoc = 5753;
@@ -5672,7 +5682,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 226";
 		rLen = 0;
-		rLoc = 6946;
+		rLoc = 7144;
 		rType = 0;
 		vrLen = 1222;
 		vrLoc = 5753;
@@ -5692,7 +5702,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 226";
 		rLen = 0;
-		rLoc = 6946;
+		rLoc = 7144;
 		rType = 0;
 		vrLen = 502;
 		vrLoc = 6318;
@@ -5702,7 +5712,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 208";
 		rLen = 0;
-		rLoc = 6057;
+		rLoc = 6255;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 5814;
@@ -5712,7 +5722,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 209";
 		rLen = 0;
-		rLoc = 6200;
+		rLoc = 6398;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 5814;
@@ -5722,7 +5732,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 233";
 		rLen = 0;
-		rLoc = 6818;
+		rLoc = 7016;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 5896;
@@ -5732,7 +5742,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 233";
 		rLen = 0;
-		rLoc = 6818;
+		rLoc = 7016;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 5896;
@@ -5742,7 +5752,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 233";
 		rLen = 0;
-		rLoc = 6818;
+		rLoc = 7016;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 6460;
@@ -5752,7 +5762,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 210";
 		rLen = 0;
-		rLoc = 6184;
+		rLoc = 6382;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 5896;
@@ -5762,7 +5772,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 210";
 		rLen = 0;
-		rLoc = 6184;
+		rLoc = 6382;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 5966;
@@ -5772,7 +5782,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 210";
 		rLen = 0;
-		rLoc = 6184;
+		rLoc = 6382;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 6003;
@@ -5782,7 +5792,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 210";
 		rLen = 0;
-		rLoc = 6184;
+		rLoc = 6382;
 		rType = 0;
 		vrLen = 1233;
 		vrLoc = 6004;
@@ -5806,7 +5816,7 @@
 		isa = PBXTextBookmark;
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		rLen = 0;
-		rLoc = 214;
+		rLoc = 220;
 		rType = 1;
 	};
 	AFB0C382135B59F7009E9BFF /* PBXTextBookmark */ = {
@@ -5814,7 +5824,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 214";
 		rLen = 0;
-		rLoc = 6258;
+		rLoc = 6456;
 		rType = 0;
 		vrLen = 465;
 		vrLoc = 5967;
@@ -5824,7 +5834,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 209";
 		rLen = 0;
-		rLoc = 6106;
+		rLoc = 6304;
 		rType = 0;
 		vrLen = 1181;
 		vrLoc = 5684;
@@ -5834,7 +5844,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 209";
 		rLen = 0;
-		rLoc = 6106;
+		rLoc = 6304;
 		rType = 0;
 		vrLen = 1167;
 		vrLoc = 5729;
@@ -5844,7 +5854,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 209";
 		rLen = 0;
-		rLoc = 6106;
+		rLoc = 6304;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 5752;
@@ -5854,7 +5864,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 238";
 		rLen = 0;
-		rLoc = 6946;
+		rLoc = 7144;
 		rType = 0;
 		vrLen = 503;
 		vrLoc = 6517;
@@ -5864,7 +5874,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 219";
 		rLen = 0;
-		rLoc = 6339;
+		rLoc = 6537;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 5793;
@@ -5874,7 +5884,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 219";
 		rLen = 0;
-		rLoc = 6339;
+		rLoc = 6537;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 5793;
@@ -5884,7 +5894,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 219";
 		rLen = 0;
-		rLoc = 6339;
+		rLoc = 6537;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 6513;
@@ -5894,7 +5904,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 235";
 		rLen = 0;
-		rLoc = 6817;
+		rLoc = 7015;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 5793;
@@ -5904,7 +5914,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 235";
 		rLen = 0;
-		rLoc = 6817;
+		rLoc = 7015;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 5964;
@@ -5914,7 +5924,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 235";
 		rLen = 0;
-		rLoc = 6817;
+		rLoc = 7015;
 		rType = 0;
 		vrLen = 1112;
 		vrLoc = 5967;
@@ -5924,7 +5934,7 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 217";
 		rLen = 0;
-		rLoc = 6336;
+		rLoc = 6534;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 5967;
@@ -5934,10 +5944,110 @@
 		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
 		name = "JGMenuWindowController.m: 218";
 		rLen = 0;
-		rLoc = 6338;
+		rLoc = 6536;
 		rType = 0;
 		vrLen = 1049;
 		vrLoc = 5684;
+	};
+	AFB0C3A4135B5CC0009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFE5C653135A01B500081B00 /* RoundWindowFrameView.h */;
+		name = "RoundWindowFrameView.h: 23";
+		rLen = 42;
+		rLoc = 672;
+		rType = 0;
+		vrLen = 891;
+		vrLoc = 0;
+	};
+	AFB0C3A5135B5CC0009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFE5C654135A01B500081B00 /* RoundWindowFrameView.m */;
+		name = "RoundWindowFrameView.m: 62";
+		rLen = 121;
+		rLoc = 1767;
+		rType = 0;
+		vrLen = 1166;
+		vrLoc = 734;
+	};
+	AFB0C3A6135B5CC0009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */;
+		name = "JGMenuWindowController.h: 19";
+		rLen = 12;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1424;
+		vrLoc = 182;
+	};
+	AFB0C3A7135B5CC0009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFE5C650135A01B500081B00 /* JGMenuWindowController.m */;
+		name = "JGMenuWindowController.m: 57";
+		rLen = 0;
+		rLoc = 1494;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 1111;
+	};
+	AFB0C3A8135B5CC0009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
+		name = "StatusItemAppDelegate.h: 12";
+		rLen = 0;
+		rLoc = 305;
+		rType = 0;
+		vrLen = 499;
+		vrLoc = 0;
+	};
+	AFB0C3A9135B5CC0009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
+		name = "StatusItemAppDelegate.m: 18";
+		rLen = 0;
+		rLoc = 506;
+		rType = 0;
+		vrLen = 1148;
+		vrLoc = 31;
+	};
+	AFB0C3AA135B5CC0009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
+		name = "StatusItemAppDelegate.m: 50";
+		rLen = 0;
+		rLoc = 1376;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 510;
+	};
+	AFB0C3AD135B5CC1009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
+		name = "StatusItemAppDelegate.m: 50";
+		rLen = 0;
+		rLoc = 1376;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 579;
+	};
+	AFB0C3B1135B5CD3009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
+		name = "StatusItemAppDelegate.m: 51";
+		rLen = 0;
+		rLoc = 1376;
+		rType = 0;
+		vrLen = 1011;
+		vrLoc = 612;
+	};
+	AFB0C3B3135B5CDB009E9BFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
+		name = "StatusItemAppDelegate.m: 50";
+		rLen = 0;
+		rLoc = 1376;
+		rType = 0;
+		vrLen = 1050;
+		vrLoc = 575;
 	};
 	AFC6E46C135786800022B65F /* DetectingTableView.h */ = {
 		uiCtxt = {
@@ -5953,7 +6063,7 @@
 			sepNavVisRange = "{254, 418}";
 		};
 	};
-	AFE5C5751359F32500081B00 /* JGMenuWindowController.m:97 */ = {
+	AFE5C5751359F32500081B00 /* JGMenuWindowController.m:100 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -5965,7 +6075,7 @@
 		functionName = "-setMenuItems:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 97;
+		lineNumber = 100;
 		location = StatusItem;
 		modificationTime = 324734441.545032;
 		originalNumberOfMultipleMatches = 1;
@@ -5976,7 +6086,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* StatusItemAppDelegate.h */;
 		name = "StatusItemAppDelegate.h: 15";
 		rLen = 0;
-		rLoc = 340;
+		rLoc = 362;
 		rType = 0;
 		vrLen = 477;
 		vrLoc = 0;
@@ -6012,16 +6122,16 @@
 	};
 	AFE5C64F135A01B500081B00 /* JGMenuWindowController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {852, 676}}";
-			sepNavSelRange = "{454, 0}";
-			sepNavVisRange = "{215, 1556}";
+			sepNavIntBoundsRect = "{{0, 0}, {852, 715}}";
+			sepNavSelRange = "{394, 12}";
+			sepNavVisRange = "{182, 1424}";
 		};
 	};
 	AFE5C650135A01B500081B00 /* JGMenuWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {922, 4212}}";
-			sepNavSelRange = "{6338, 0}";
-			sepNavVisRange = "{5684, 1049}";
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 4199}}";
+			sepNavSelRange = "{6534, 0}";
+			sepNavVisRange = "{5853, 451}";
 		};
 	};
 	AFE5C651135A01B500081B00 /* NSBezierPath+PXRoundedRectangleAdditions.h */ = {
@@ -6047,9 +6157,9 @@
 	};
 	AFE5C654135A01B500081B00 /* RoundWindowFrameView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1219, 962}}";
-			sepNavSelRange = "{1674, 0}";
-			sepNavVisRange = "{1434, 460}";
+			sepNavIntBoundsRect = "{{0, 0}, {964, 884}}";
+			sepNavSelRange = "{1767, 121}";
+			sepNavVisRange = "{734, 1166}";
 		};
 	};
 	AFE5C66F135A024800081B00 /* PBXTextBookmark */ = {
@@ -6057,7 +6167,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* StatusItemAppDelegate.m */;
 		name = "StatusItemAppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 658;
+		rLoc = 698;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 0;

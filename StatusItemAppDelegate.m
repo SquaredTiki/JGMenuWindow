@@ -15,6 +15,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
 	[menuController setHeaderView:customView];
+	[menuController setMenuDelegate:self];
 }
 
 - (void)applicationDidResignActive:(NSNotification *)aNotification {
@@ -42,6 +43,13 @@
 - (void)itemSelected {
 	NSLog(@"item selected");
 }
+
+#pragma mark JGMenuWindowDelegate
+
+- (void)menuWillOpen {
+	[searchField becomeFirstResponder]; // Even though it will happen automatically, just to be on the safe side…
+}
+
 
 #pragma mark NSControlTextEditingDelegate
 

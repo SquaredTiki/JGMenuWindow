@@ -14,7 +14,11 @@
 #import "JGMenuItem.h"
 
 @protocol JGMenuWindowDelegate <NSObject>
-// Empty due to implementation of JGMenuItem which deals with target and action
+
+@optional
+- (void)menuWillOpen;
+- (void)menuWillClose;
+
 @end
 
 

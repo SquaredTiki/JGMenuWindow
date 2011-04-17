@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "JGMenuWindowController.h"
 
-@interface StatusItemAppDelegate : NSObject <NSApplicationDelegate> {
+@interface StatusItemAppDelegate : NSObject <NSApplicationDelegate, JGMenuWindowDelegate> {
     NSWindow *window;
 	
 	IBOutlet NSView *customView;

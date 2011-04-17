@@ -53,6 +53,9 @@
 #pragma mark Handling changes to the window
 
 - (void)closeWindow {
+	if ([menuDelegate respondsToSelector:@selector(menuWillClose)])
+		[menuDelegate menuWillClose];	
+	
     timer = [[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(fade:) userInfo:nil repeats:YES] retain];
 	[customStatusView setHighlighted:NO];
 }
@@ -197,6 +200,9 @@
 }
 
 - (void)statusItemSelected:(id)sender {
+	if ([menuDelegate respondsToSelector:@selector(menuWillOpen)])
+		[menuDelegate menuWillOpen];	
+	
 	[self loadHeights];
 	[self.window makeKeyAndOrderFront:self];
 	[customStatusView setHighlighted:YES];
