@@ -327,7 +327,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFB0C10F135B32A4009E9BFF</string>
+										<string>AFB0C173135B3760009E9BFF</string>
 										<key>history</key>
 										<array>
 											<string>AFA4C5B21356DEE900C0D3CE</string>
@@ -347,7 +347,7 @@
 											<string>AFB0C0C1135B3036009E9BFF</string>
 											<string>AFB0C0C8135B308F009E9BFF</string>
 											<string>AFB0C0C9135B308F009E9BFF</string>
-											<string>AFB0C0D0135B30A3009E9BFF</string>
+											<string>AFB0C12C135B34B3009E9BFF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -661,7 +661,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFB0C110135B32A4009E9BFF</string>
+		<string>AFB0C174135B3760009E9BFF</string>
 		<string>AFB0BF29135ACC8D009E9BFF</string>
 		<string>AFB0BF2A135ACC8D009E9BFF</string>
 		<string>/Users/joshuagarnham/Desktop/Projects/Obj-C/Tests/StatusItem/StatusItem.xcodeproj</string>

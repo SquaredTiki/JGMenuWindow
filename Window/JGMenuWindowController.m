@@ -254,6 +254,19 @@
 			rectToDraw.size.height = 19;
 			rectToDraw.origin.y = rectToDraw.origin.y + 1;
 			[aGradient drawInRect:rectToDraw angle:90];
+			
+			NSRect upperLineRect = [aTableView rectOfRow:rowIndex];
+			upperLineRect.origin.y = upperLineRect.origin.y + 1;
+			upperLineRect.size.height = 1.0;
+			[[NSColor colorWithDeviceRed:0.376 green:0.498 blue:0.925 alpha:1.000] set];
+			NSRectFill(upperLineRect);
+			
+			NSRect lowerLineRect = [aTableView rectOfRow:rowIndex];
+			lowerLineRect.origin.y = NSMaxY(lowerLineRect) - 1;
+			lowerLineRect.size.height = 1.0;
+			[[NSColor colorWithDeviceRed:0.169 green:0.318 blue:0.914 alpha:1.000] set];
+			NSRectFill(lowerLineRect);
+			
 			[aTableView unlockFocus];
 			
 			[aCell setTextColor:[NSColor selectedMenuItemTextColor]];
