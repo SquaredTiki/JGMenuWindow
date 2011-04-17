@@ -55,4 +55,13 @@
 	}
 }
 
+- (void)mouseDownInTableViewWithEvent:(NSEvent *)event {	
+	NSPoint location = [event locationInWindow];
+	
+	if (location.x > 0 && location.y > 0) {
+		if ([tableDelegate respondsToSelector:@selector(mouseDownAtLocation:)])
+			[tableDelegate mouseDownAtLocation:location];	
+	}
+}
+
 @end

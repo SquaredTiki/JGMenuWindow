@@ -20,6 +20,7 @@
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc;
 - (void)mouseMovedOutOfView;
+- (void)mouseDownAtLocation:(NSPoint)loc;
 
 @end
 

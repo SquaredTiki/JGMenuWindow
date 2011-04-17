@@ -23,4 +23,9 @@
 	trackingTag = [self addTrackingRect:[self frame] owner:self userData:nil assumeInside:NO];
 }
 
+- (void)mouseDown:(NSEvent *)event {
+	// Pass it on to window controller view
+	[[[[self window] contentView] superview] mouseDownInTableViewWithEvent:event];
+}
+
 @end

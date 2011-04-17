@@ -16,12 +16,6 @@ The only other thing you need to do is in the `applicationDidResignActive:` meth
 
     [menuController closeWindow];
 
-You can also receive delegate messages by subscribing to be the delegate like so:
-
-    [menuController setMenuDelegate:self];
-
-This allows you to know when a menu item has been selected.
-
 # Demo App
 
 The project is simply a demo which shows how it can be used in a similar fashion to Spotlight. If you are unsure how to use it just check the demo out.

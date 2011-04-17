@@ -45,10 +45,6 @@
 
 #pragma mark Misc.
 
-+ (NSString *)seperatorItem {
-	return @"--[SEPERATOR]--";
-}
-
 - (void)highlightMenuItemAtIndex:(int)rowIndex {
 	mouseOverRow = rowIndex;
 	[itemsTable reloadData];
@@ -91,8 +87,8 @@
 	// Work out headerView sizing based on string size
 	if (headerView == nil) {
 		float width = 0;
-		for (NSString *string in menuItems) {
-			NSSize size = [string sizeWithAttributes:[NSDictionary dictionaryWithObject:[NSFont fontWithName: @"Lucida Grande" size: 13] forKey:NSFontAttributeName]];
+		for (JGMenuItem *item in menuItems) {
+			NSSize size = [item.title sizeWithAttributes:[NSDictionary dictionaryWithObject:[NSFont fontWithName: @"Lucida Grande" size: 13] forKey:NSFontAttributeName]];
 			if (size.width + 50 > width)
 				width = size.width + 50;
 		}
@@ -143,8 +139,8 @@
 //		sizeOfCellsInTableView = (20 * [menuItems count]) + 6;
 //	}
 	
-	for (NSString *string in menuItems) {
-		if ([string isEqualToString:@"--[SEPERATOR]--"]) {
+	for (JGMenuItem *item in menuItems) {
+		if ([[item title] isEqualToString:@"--[SEPERATOR]--"]) {
 			sizeOfCellsInTableView = sizeOfCellsInTableView + 12;
 		} else {
 			sizeOfCellsInTableView = sizeOfCellsInTableView + 20;
@@ -215,8 +211,18 @@
 }
 
 - (void)mouseMovedOutOfView {
-	mouseOverRow = -1;
-	[itemsTable reloadData];
+	if (mouseOverRow != -1) {	
+		mouseOverRow = -1;
+		[itemsTable reloadData];
+	}
+}
+
+- (void)mouseDownAtLocation:(NSPoint)loc {
+	int row = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
+	if (row > 0) {
+		JGMenuItem *selectedItem = [menuItems objectAtIndex:row];
+		[[selectedItem target] performSelector:[selectedItem action]];
+	}
 }
 
 #pragma mark NSTableViewDataSource
@@ -226,28 +232,26 @@
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
-	if ([[menuItems objectAtIndex:rowIndex] isEqualToString:@"--[SEPERATOR]--"])
+	if ([[[menuItems objectAtIndex:rowIndex] title] isEqualToString:@"--[SEPERATOR]--"])
 		return @"";
-	return [menuItems objectAtIndex:rowIndex];
+	return [[menuItems objectAtIndex:rowIndex] title];
 }
 
 #pragma mark NSTableViewDelegate
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)rowIndex {
-	if ([[menuItems objectAtIndex:rowIndex] isEqualToString:@"--[SEPERATOR]--"])
+	if ([[[menuItems objectAtIndex:rowIndex] title] isEqualToString:@"--[SEPERATOR]--"])
 		return 10;
 	return 18;
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
-	if ([menuDelegate respondsToSelector:@selector(didSelectMenuItemAtIndex:)])
-		[menuDelegate didSelectMenuItemAtIndex:rowIndex];	
 	return NO;
 }
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {	
-	if ([[menuItems objectAtIndex:rowIndex] isEqualToString:@"--[SEPERATOR]--"]) {
+	if ([[[menuItems objectAtIndex:rowIndex] title] isEqualToString:@"--[SEPERATOR]--"]) {
 		NSRect rowRect = [aTableView rectOfRow:rowIndex];
 		rowRect.origin.x = 1;
 		rowRect.origin.y += (int) (NSHeight(rowRect)/2);

@@ -11,12 +11,10 @@
 #import "RoundWindowFrameView.h" 
 #import "DetectingTableView.h"
 #import "BorderlessWindow.h"
+#import "JGMenuItem.h"
 
 @protocol JGMenuWindowDelegate <NSObject>
-
-@optional
-- (void)didSelectMenuItemAtIndex:(int)index; // Called when a menu item is selected, in this method you can deal with the action
-
+// Empty due to implementation of JGMenuItem which deals with target and action
 @end
 
 
@@ -35,7 +33,7 @@
 	
 	@public
 	
-	NSArray *menuItems; // An array of menuItems which can be set and which will be displayed
+	NSArray *menuItems; // An array of JGMenuItem's which can be set and which will be displayed
 	NSView *headerView; // An optional headerView to be displayed at the top of the menu in a similar way to spotlight
 	
 	id <JGMenuWindowDelegate> menuDelegate; // The delegate which will recieve the optional method calls
@@ -47,7 +45,6 @@
 @property (nonatomic, retain) NSView *headerView;
 @property (nonatomic, retain) id <JGMenuWindowDelegate> menuDelegate;
 
-+ (NSString *)seperatorItem; // Add this to menuItems to get a seperator
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
 - (void)closeWindow; // Close window with fade out
 

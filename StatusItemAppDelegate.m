@@ -15,27 +15,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
 	[menuController setHeaderView:customView];
-	[menuController setMenuDelegate:self];
-/*	NSMutableArray *items = [[NSMutableArray alloc] init];
-	for (int i = 0; i < 6; i++)
-		[items addObject:[NSString stringWithFormat:@"Result %i", i]];
-	[menuController setMenuItems:items]; 
-	[items release]; */
 }
 
 - (void)applicationDidResignActive:(NSNotification *)aNotification {
 	[menuController closeWindow];
-}
-
-#pragma mark JGMenuWindowDelegate
-
-- (void)didSelectMenuItemAtIndex:(int)index {
-	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-	[alert addButtonWithTitle:@"Coolio!"];
-	[alert setMessageText:@"You Selected a Menu Item"];
-	[alert setInformativeText:[NSString stringWithFormat:@"To be more precise you selected the item at index %i", index]];
-	[alert setAlertStyle:NSInformationalAlertStyle];
-	[alert runModal];	
 }
 
 #pragma mark Showing and Hiding Table
@@ -44,16 +27,20 @@
 	NSMutableArray *items = [[NSMutableArray alloc] init];
 	for (int i = 0; i < 6; i++) {
 		if (i==3)
-			[items addObject:[JGMenuWindowController seperatorItem]];
-		[items addObject:[NSString stringWithFormat:@"Result %i", i]];
-	}
+			[items addObject:[JGMenuItem seperatorItem]];
+		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:@selector(itemSelected)];
+		[items addObject:menuItem];
+	} 
 	[menuController setMenuItems:items];
-	[items release];
 	[menuController highlightMenuItemAtIndex:0];
 }
 
 - (void)hideTableView {
 	[menuController setMenuItems:nil];
+}
+
+- (void)itemSelected {
+	NSLog(@"item selected");
 }
 
 #pragma mark NSControlTextEditingDelegate
