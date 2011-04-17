@@ -16,9 +16,10 @@
 
 #define WINDOW_FRAME_PADDING 0
 
-@protocol TableDetectionDelegate
+@protocol TableDetectionDelegate <NSObject>
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc;
+- (void)mouseMovedOutOfView;
 
 @end
 

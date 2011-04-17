@@ -49,6 +49,9 @@
 	if (location.x > 0 && location.y > 0) {
 		if ([tableDelegate respondsToSelector:@selector(mouseMovedIntoLocation:)])
 			 [tableDelegate mouseMovedIntoLocation:location];	
+	} else {
+		if ([tableDelegate respondsToSelector:@selector(mouseMovedOutOfView)])
+			[tableDelegate mouseMovedOutOfView];	
 	}
 }
 

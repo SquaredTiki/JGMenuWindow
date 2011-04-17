@@ -49,6 +49,7 @@
 	}
 	[menuController setMenuItems:items];
 	[items release];
+	[menuController highlightMenuItemAtIndex:0];
 }
 
 - (void)hideTableView {

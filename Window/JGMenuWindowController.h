@@ -34,7 +34,7 @@
 	
 	id <JGMenuWindowDelegate> menuDelegate; // The delegate which will recieve the optional method calls
 
-	NSTimer *timer;
+	NSTimer *timer; // PRIVATE: Used for fade out.
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
@@ -44,8 +44,9 @@
 @property (nonatomic, retain) id <JGMenuWindowDelegate> menuDelegate;
 
 + (NSString *)seperatorItem; // Add this to menuItems to get a seperator
+- (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
+- (void)closeWindow;
 
 - (void)loadHeights;
-- (void)closeWindow;
 
 @end

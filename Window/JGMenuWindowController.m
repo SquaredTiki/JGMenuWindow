@@ -27,16 +27,25 @@
 		[customStatusView setDeselectingAction:@selector(statusItemDeselected:)];
 		[statusItem setView:customStatusView];
 		
+		// Set delegates
 		[(RoundWindowFrameView *)[[self.window contentView] superview] setTableDelegate:self];
-		
 		[[self window] setDelegate:self];
+		
+		// Set up ivars
+		mouseOverRow = -1;
 	}
 	return self;
 }
 
+#pragma mark Misc.
 
 + (NSString *)seperatorItem {
 	return @"--[SEPERATOR]--";
+}
+
+- (void)highlightMenuItemAtIndex:(int)rowIndex {
+	mouseOverRow = rowIndex;
+	[itemsTable reloadData];
 }
 
 #pragma mark Handling changes to the window
@@ -196,6 +205,11 @@
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc {
 	mouseOverRow = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
+	[itemsTable reloadData];
+}
+
+- (void)mouseMovedOutOfView {
+	mouseOverRow = -1;
 	[itemsTable reloadData];
 }
 
