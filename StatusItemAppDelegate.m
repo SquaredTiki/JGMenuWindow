@@ -15,8 +15,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
 	[menuController setHeaderView:customView];
+	[menuController setMenuDelegate:self];
 /*	NSMutableArray *items = [[NSMutableArray alloc] init];
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 6; i++)
 		[items addObject:[NSString stringWithFormat:@"Result %i", i]];
 	[menuController setMenuItems:items]; 
 	[items release]; */
@@ -24,6 +25,12 @@
 
 - (void)applicationDidResignActive:(NSNotification *)aNotification {
 	[menuController closeWindow];
+}
+
+#pragma mark JGMenuWindowDelegate
+
+- (void)didSelectMenuItemAtIndex:(int)index {
+	NSLog(@"didSelectMenuItemAtIndex:%i", index);
 }
 
 #pragma mark Showing and Hiding Table
@@ -55,10 +62,6 @@
 	} else {
 		[self hideTableView];
 	}
-}
-
-- (void)controlTextDidEndEditing:(NSNotification *)obj {
-	[self hideTableView];
 }
 
 @end

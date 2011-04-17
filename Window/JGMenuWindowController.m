@@ -9,7 +9,7 @@
 #import "JGMenuWindowController.h"
 
 @implementation JGMenuWindowController
-@synthesize itemsTable, _headerView;
+@synthesize itemsTable, _headerView, menuDelegate;
 @dynamic menuItems, headerView;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName {
@@ -53,8 +53,8 @@
 		float width = 0;
 		for (NSString *string in menuItems) {
 			NSSize size = [string sizeWithAttributes:[NSDictionary dictionaryWithObject:[NSFont fontWithName: @"Lucida Grande" size: 13] forKey:NSFontAttributeName]];
-			if (size.width > width)
-				width = size.width + 10;
+			if (size.width + 50 > width)
+				width = size.width + 50;
 		}
 		headerView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, width, 0)];	
 	}	
@@ -177,6 +177,8 @@
 #pragma mark NSTableViewDelegate
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
+	if ([menuDelegate respondsToSelector:@selector(didSelectMenuItemAtIndex:)])
+		[menuDelegate didSelectMenuItemAtIndex:rowIndex];
 	return NO;
 }
 

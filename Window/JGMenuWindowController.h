@@ -12,6 +12,14 @@
 #import "DetectingTableView.h"
 #import "BorderlessWindow.h"
 
+@protocol JGMenuWindowDelegate <NSObject>
+
+@optional
+- (void)didSelectMenuItemAtIndex:(int)index; // Called when a menu item is selected, in this method you can deal with the action
+
+@end
+
+
 @interface JGMenuWindowController : NSWindowController <TableDetectionDelegate, NSApplicationDelegate> {	
 	NSStatusItem *statusItem; // The Primary Status Item
 	CustomStatusItemView *customStatusView; // The Custom view within the status item
@@ -23,12 +31,15 @@
 	int mouseOverRow; // PRIVATE: Used to store which row the mouse is hovering over
 	
 	NSView *_headerView; // PRIVATE: The header view conainer
+	
+	id <JGMenuWindowDelegate> menuDelegate; // The delegate which will recieve the optional method calls
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
 @property (assign, readonly) IBOutlet NSView *_headerView;
 @property (nonatomic, retain) NSArray *menuItems;
 @property (nonatomic, retain) NSView *headerView;
+@property (nonatomic, retain) id <JGMenuWindowDelegate> menuDelegate;
 
 - (void)loadHeights;
 - (void)closeWindow;
