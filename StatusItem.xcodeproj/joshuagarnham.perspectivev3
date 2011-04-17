@@ -275,8 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>17</integer>
+									<integer>16</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>AFF3FD911324BDE500BC980F</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RoundWindowFrameView.m</string>
+								<string>JGMenuWindowController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>AFF3FD921324BDE500BC980F</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RoundWindowFrameView.m</string>
+										<string>JGMenuWindowController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFB0C35A135B5816009E9BFF</string>
+										<string>AFB0C3A3135B5AEE009E9BFF</string>
 										<key>history</key>
 										<array>
 											<string>AFA4C5B21356DEE900C0D3CE</string>
@@ -346,14 +346,14 @@
 											<string>AFB0C317135B56B1009E9BFF</string>
 											<string>AFB0C318135B56B1009E9BFF</string>
 											<string>AFB0C31A135B56B1009E9BFF</string>
-											<string>AFB0C325135B56DA009E9BFF</string>
 											<string>AFB0C34C135B5802009E9BFF</string>
 											<string>AFB0C34D135B5802009E9BFF</string>
 											<string>AFB0C34E135B5802009E9BFF</string>
-											<string>AFB0C34F135B5802009E9BFF</string>
 											<string>AFB0C350135B5802009E9BFF</string>
 											<string>AFB0C351135B5802009E9BFF</string>
-											<string>AFB0C359135B5810009E9BFF</string>
+											<string>AFB0C35B135B588C009E9BFF</string>
+											<string>AFB0C35C135B588C009E9BFF</string>
+											<string>AFB0C3A2135B5AE8009E9BFF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -667,6 +667,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>AFB0C3A1135B5ADD009E9BFF</string>
 		<string>AFB0BF29135ACC8D009E9BFF</string>
 		<string>AFB0BF2A135ACC8D009E9BFF</string>
 		<string>/Users/joshuagarnham/Desktop/Projects/Obj-C/Tests/StatusItem/StatusItem.xcodeproj</string>

@@ -205,6 +205,18 @@
 
 #pragma mark TableDetectionDelegate
 
+- (void)flashHighlightForRowThenClose:(NSNumber *)row {
+	mouseOverRow = -1;
+	[itemsTable reloadData];
+	[self performSelector:@selector(resetMouseOverRowToAndClose:) withObject:row afterDelay:0.1];
+}
+
+- (void)resetMouseOverRowToAndClose:(NSNumber *)row {
+	mouseOverRow = [row intValue];
+	[itemsTable reloadData];
+	[self closeWindow];
+}
+
 - (void)mouseMovedIntoLocation:(NSPoint)loc {
 	mouseOverRow = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
 	[itemsTable reloadData];
@@ -220,6 +232,7 @@
 - (void)mouseDownAtLocation:(NSPoint)loc {
 	int row = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
 	if (row > 0) {
+		[self flashHighlightForRowThenClose:[NSNumber numberWithInt:row]];
 		JGMenuItem *selectedItem = [menuItems objectAtIndex:row];
 		[[selectedItem target] performSelector:[selectedItem action]];
 	}
