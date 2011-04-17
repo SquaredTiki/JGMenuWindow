@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "CustomStatusItemView.h"
 #import "RoundWindowFrameView.h" 
-#import "ROTableView.h"
+#import "DetectingTableView.h"
 #import "BorderlessWindow.h"
 
 @interface JGMenuWindowController : NSWindowController <TableDetectionDelegate, NSApplicationDelegate> {	

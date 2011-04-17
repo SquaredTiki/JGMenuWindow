@@ -314,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>AFF3FD911324BDE500BC980F</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DetectingTableView.m</string>
+								<string>JGMenuWindowController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,22 +322,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>AFF3FD921324BDE500BC980F</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DetectingTableView.m</string>
+										<string>JGMenuWindowController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFE5C67B135A025100081B00</string>
+										<string>AFB0BEE5135AC8B3009E9BFF</string>
 										<key>history</key>
 										<array>
-											<string>AFEF34D71356B7A1003E4C4B</string>
-											<string>AFEF34D81356B7A1003E4C4B</string>
 											<string>AFA4C5B21356DEE900C0D3CE</string>
-											<string>AFC6E30B1357559E0022B65F</string>
-											<string>AFC6E3AD13577F840022B65F</string>
-											<string>AFC6E48C135786F50022B65F</string>
-											<string>AF998E5A13582F3B00ACB3E5</string>
-											<string>AF998E5E13582F3B00ACB3E5</string>
-											<string>AF998EE01358412E00ACB3E5</string>
 											<string>AF998F641358993B00ACB3E5</string>
 											<string>AF998F651358993B00ACB3E5</string>
 											<string>AFE5C5E61359F7F500081B00</string>
@@ -345,7 +337,8 @@
 											<string>AFE5C670135A024800081B00</string>
 											<string>AFE5C671135A024800081B00</string>
 											<string>AFE5C672135A024800081B00</string>
-											<string>AFE5C67A135A025000081B00</string>
+											<string>AFB0BEE3135AC8B3009E9BFF</string>
+											<string>AFB0BEE4135AC8B3009E9BFF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -359,18 +352,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {913, 412}}</string>
+								<string>{{0, 0}, {913, 399}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 143 1280 635 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>412pt</string>
+							<string>399pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>177pt</string>
+							<string>190pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -384,7 +377,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {913, -27}}</string>
+										<string>{{10, 27}, {913, 163}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -438,7 +431,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {913, 150}}</string>
+										<string>{{10, 27}, {913, 163}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 143 1280 635 0 0 1280 778 </string>
 									</dict>
@@ -468,11 +461,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>AFE5C53C1359F18900081B00</string>
+				<string>AFB0BEE6135AC8B3009E9BFF</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>AFE5C53D1359F18900081B00</string>
+				<string>AFB0BEE7135AC8B3009E9BFF</string>
 				<string>AFF3FD911324BDE500BC980F</string>
-				<string>AFE5C53E1359F18900081B00</string>
+				<string>AFB0BEE8135AC8B3009E9BFF</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -659,8 +652,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFE5C5451359F18900081B00</string>
-		<string>AFE5C5461359F18900081B00</string>
 		<string>/Users/joshuagarnham/Desktop/Projects/Obj-C/Tests/StatusItem/StatusItem.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
