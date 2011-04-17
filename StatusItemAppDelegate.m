@@ -30,7 +30,12 @@
 #pragma mark JGMenuWindowDelegate
 
 - (void)didSelectMenuItemAtIndex:(int)index {
-	NSLog(@"didSelectMenuItemAtIndex:%i", index);
+	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	[alert addButtonWithTitle:@"Coolio!"];
+	[alert setMessageText:@"You Selected a Menu Item"];
+	[alert setInformativeText:[NSString stringWithFormat:@"To be more precise you selected the item at index %i", index]];
+	[alert setAlertStyle:NSInformationalAlertStyle];
+	[alert runModal];	
 }
 
 #pragma mark Showing and Hiding Table

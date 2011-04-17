@@ -28,6 +28,8 @@
 		[statusItem setView:customStatusView];
 		
 		[(RoundWindowFrameView *)[[self.window contentView] superview] setTableDelegate:self];
+		
+		[[self window] setDelegate:self];
 	}
 	return self;
 }
@@ -35,8 +37,26 @@
 #pragma mark Handling changes to the window
 
 - (void)closeWindow {
-	[self.window close];
+    timer = [[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(fade:) userInfo:nil repeats:YES] retain];
 	[customStatusView setHighlighted:NO];
+}
+
+- (void)fade:(NSTimer *)theTimer
+{
+    if ([self.window alphaValue] > 0.0) {
+        // If window is still partially opaque, reduce its opacity.
+        [self.window setAlphaValue:[self.window alphaValue] - 0.3];
+    } else {
+        // Otherwise, if window is completely transparent, destroy the timer and close the window.
+        [timer invalidate];
+        [timer release];
+        timer = nil;
+        
+        [self.window close];
+        
+        // Make the window fully opaque again for next time.
+        [self.window setAlphaValue:1.0];
+    }
 }
 
 #pragma mark Handling changes to menuItems and headerView
@@ -146,15 +166,14 @@
 }
 
 - (void)statusItemDeselected:(id)sender {
-	[self.window close];
-	[customStatusView setHighlighted:NO];
+	[self closeWindow];
 }
 
 - (void)statusItemSelected:(id)sender {
 	[self loadHeights];
 	[self.window makeKeyAndOrderFront:self];
-	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 	[customStatusView setHighlighted:YES];
+	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
 
 #pragma mark TableDetectionDelegate
@@ -178,7 +197,7 @@
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
 	if ([menuDelegate respondsToSelector:@selector(didSelectMenuItemAtIndex:)])
-		[menuDelegate didSelectMenuItemAtIndex:rowIndex];
+		[menuDelegate didSelectMenuItemAtIndex:rowIndex];	
 	return NO;
 }
 

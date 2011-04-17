@@ -20,7 +20,7 @@
 @end
 
 
-@interface JGMenuWindowController : NSWindowController <TableDetectionDelegate, NSApplicationDelegate> {	
+@interface JGMenuWindowController : NSWindowController <NSWindowDelegate, TableDetectionDelegate> {	
 	NSStatusItem *statusItem; // The Primary Status Item
 	CustomStatusItemView *customStatusView; // The Custom view within the status item
 	
@@ -33,6 +33,8 @@
 	NSView *_headerView; // PRIVATE: The header view conainer
 	
 	id <JGMenuWindowDelegate> menuDelegate; // The delegate which will recieve the optional method calls
+
+	NSTimer *timer;
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
