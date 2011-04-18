@@ -16,6 +16,14 @@
 	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
 	[menuController setHeaderView:customView];
 	[menuController setMenuDelegate:self];
+/*	NSMutableArray *items = [[NSMutableArray alloc] init];
+	for (int i = 0; i < 6; i++) {
+		if (i==3)
+			[items addObject:[JGMenuItem seperatorItem]];
+		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:@selector(itemSelected)];
+		[items addObject:menuItem];
+	} 	
+	[menuController setMenuItems:items]; */
 }
 
 #pragma mark Showing and Hiding Table
@@ -45,7 +53,6 @@
 - (void)menuWillOpen {
 	[searchField becomeFirstResponder]; // Even though it will happen automatically, just to be on the safe side…
 }
-
 
 #pragma mark NSControlTextEditingDelegate
 

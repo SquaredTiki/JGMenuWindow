@@ -204,6 +204,11 @@
 }
 
 - (void)statusItemSelected:(id)sender {
+	NSLog(@"selected");
+	
+	NSMenu *fakeMenu = [[NSMenu alloc] init]; // Used to make sure another menu such as Spotlight will disapear when this is opened
+	[statusItem popUpStatusItemMenu:fakeMenu];
+	
 	if ([menuDelegate respondsToSelector:@selector(menuWillOpen)])
 		[menuDelegate menuWillOpen];	
 	
