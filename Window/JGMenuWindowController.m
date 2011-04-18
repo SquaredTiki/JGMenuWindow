@@ -16,7 +16,7 @@
 
 @implementation JGMenuWindowController
 @synthesize itemsTable, _headerView, menuDelegate;
-@dynamic menuItems, headerView;
+@dynamic menuItems, headerView, statusItemImage, statusItemAlternateImage;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName {
 	self = [super initWithWindowNibName:windowNibName];
@@ -31,6 +31,7 @@
 		[customStatusView setTarget:self];
 		[customStatusView setSelectingAction:@selector(statusItemSelected:)];
 		[customStatusView setDeselectingAction:@selector(statusItemDeselected:)];
+		[customStatusView setStatusItem:statusItem];
 		[statusItem setView:customStatusView];
 		
 		// Set delegates
@@ -113,6 +114,36 @@
 - (void)setHeaderView:(NSView *)view {
 	headerView = view;
 	[self loadHeights];
+}
+
+#pragma mark Handling changes to statusItemImage and statusItemAlternateImage
+
+- (NSImage *)statusItemImage {
+	return statusItemImage;
+}
+
+- (void)setStatusItemImage:(NSImage *)newImage
+{
+	if(newImage != statusItemImage)
+	{
+		[statusItemImage release];
+		statusItemImage = [newImage copy];
+		[customStatusView setImage:statusItemImage];
+	}
+}
+
+- (NSImage *)statusItemAlternateImage {
+	return statusItemAlternateImage;
+}
+
+- (void)setStatusItemAlternateImage:(NSImage *)newAltImage
+{
+	if(newAltImage != statusItemAlternateImage)
+	{
+		[statusItemAlternateImage release];
+		statusItemAlternateImage = [newAltImage copy];
+		[customStatusView setAlternateImage:statusItemAlternateImage];
+	}
 }
 
 #pragma mark Handling the Status Item
@@ -214,7 +245,6 @@
 	
 	[self loadHeights];
 	[self.window makeKeyAndOrderFront:self];
-	[customStatusView setHighlighted:YES];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
 

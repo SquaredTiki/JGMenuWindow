@@ -10,16 +10,24 @@
 
 
 @interface CustomStatusItemView : NSView {
+	NSStatusItem *statusItem;
+
 	id target;
 	SEL selectingAction;
 	SEL deselectingAction;
 	
 	BOOL highlighted;
+	
+	NSImage *image;
+	NSImage *alternateImage;
 }
 
+@property (nonatomic, retain) NSStatusItem *statusItem;
 @property (nonatomic, assign) id target;
 @property (nonatomic, assign) SEL selectingAction;
 @property (nonatomic, assign) SEL deselectingAction;
 @property (nonatomic, assign) BOOL highlighted;
+@property (copy, nonatomic) NSImage *image;
+@property (copy, nonatomic) NSImage *alternateImage;
 
 @end

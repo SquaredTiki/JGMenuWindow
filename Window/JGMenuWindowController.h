@@ -44,6 +44,9 @@
 	NSView *headerView; // An optional headerView to be displayed at the top of the menu in a similar way to spotlight
 	
 	id <JGMenuWindowDelegate> menuDelegate; // The delegate which will recieve the optional method calls
+	
+	NSImage *statusItemImage; // Relayed to the customStatusView to set the Status Item image
+	NSImage *statusItemAlternateImage; // Relayed to the customStatusView to set the Status Item alternate image
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
@@ -51,6 +54,8 @@
 @property (nonatomic, retain) NSArray *menuItems;
 @property (nonatomic, retain) NSView *headerView;
 @property (nonatomic, retain) id <JGMenuWindowDelegate> menuDelegate;
+@property (nonatomic, copy) NSImage *statusItemImage;
+@property (nonatomic, copy) NSImage *statusItemAlternateImage;
 
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
 - (void)closeWindow; // Close window with fade out
