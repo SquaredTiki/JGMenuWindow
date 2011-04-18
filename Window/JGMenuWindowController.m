@@ -16,7 +16,7 @@
 
 @implementation JGMenuWindowController
 @synthesize itemsTable, _headerView, menuDelegate;
-@dynamic menuItems, headerView, statusItemImage, statusItemAlternateImage;
+@dynamic menuItems, headerView, statusItemImage, statusItemAlternateImage, statusItemTitle;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName {
 	self = [super initWithWindowNibName:windowNibName];
@@ -116,7 +116,7 @@
 	[self loadHeights];
 }
 
-#pragma mark Handling changes to statusItemImage and statusItemAlternateImage
+#pragma mark Handling changes to dynamic properties to be relayed to status item view
 
 - (NSImage *)statusItemImage {
 	return statusItemImage;
@@ -143,6 +143,20 @@
 		[statusItemAlternateImage release];
 		statusItemAlternateImage = [newAltImage copy];
 		[customStatusView setAlternateImage:statusItemAlternateImage];
+	}
+}
+
+- (NSString *)statusItemTitle {
+	return statusItemTitle;
+}
+
+- (void)setStatusItemTitle:(NSString *)newTitle
+{
+	if(newTitle != statusItemTitle)
+	{
+		[statusItemTitle release];
+		statusItemTitle = [newTitle copy];
+		[customStatusView setTitle:statusItemTitle];
 	}
 }
 

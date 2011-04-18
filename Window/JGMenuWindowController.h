@@ -47,6 +47,7 @@
 	
 	NSImage *statusItemImage; // Relayed to the customStatusView to set the Status Item image
 	NSImage *statusItemAlternateImage; // Relayed to the customStatusView to set the Status Item alternate image
+	NSString *statusItemTitle; // Relayed to the customStatusView to set the Status Item title
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
@@ -56,6 +57,7 @@
 @property (nonatomic, retain) id <JGMenuWindowDelegate> menuDelegate;
 @property (nonatomic, copy) NSImage *statusItemImage;
 @property (nonatomic, copy) NSImage *statusItemAlternateImage;
+@property (nonatomic, copy) NSString *statusItemTitle;
 
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
 - (void)closeWindow; // Close window with fade out

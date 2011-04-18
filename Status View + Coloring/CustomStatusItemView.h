@@ -20,6 +20,10 @@
 	
 	NSImage *image;
 	NSImage *alternateImage;
+	
+	NSString *title;
+	
+	NSAttributedString *_attributedTitle;
 }
 
 @property (nonatomic, retain) NSStatusItem *statusItem;
@@ -29,5 +33,7 @@
 @property (nonatomic, assign) BOOL highlighted;
 @property (copy, nonatomic) NSImage *image;
 @property (copy, nonatomic) NSImage *alternateImage;
+@property (copy, nonatomic) NSString *title;
+@property (nonatomic, retain) NSAttributedString *_attributedTitle;
 
 @end

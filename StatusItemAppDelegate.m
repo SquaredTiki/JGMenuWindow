@@ -16,6 +16,7 @@
 	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
 	[menuController setHeaderView:customView];
 	[menuController setMenuDelegate:self];
+	[menuController setStatusItemTitle:@"Search"];
 /*	NSMutableArray *items = [[NSMutableArray alloc] init];
 	for (int i = 0; i < 6; i++) {
 		if (i==3)
