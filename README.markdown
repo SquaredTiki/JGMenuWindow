@@ -12,10 +12,6 @@ Simply copy the required files to your project and initialise the controller lik
 
 This will create the status item in the menu bar and set up all the actions for it. From there just set the properties you want like the `menuItems` and/or the `headerView`.
 
-The only other thing you need to do is in the `applicationDidResignActive:` method close the menu by adding the line:
-
-    [menuController closeWindow];
-
 # Demo App
 
 The project is simply a demo which shows how it can be used in a similar fashion to Spotlight. If you are unsure how to use it just check the demo out.

@@ -52,6 +52,10 @@
 
 #pragma mark Handling changes to the window
 
+- (void)windowDidResignKey:(NSNotification *)notification {
+	[self closeWindow];
+}
+
 - (void)closeWindow {
 	if ([menuDelegate respondsToSelector:@selector(menuWillClose)])
 		[menuDelegate menuWillClose];	

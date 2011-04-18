@@ -18,10 +18,6 @@
 	[menuController setMenuDelegate:self];
 }
 
-- (void)applicationDidResignActive:(NSNotification *)aNotification {
-	[menuController closeWindow];
-}
-
 #pragma mark Showing and Hiding Table
 
 - (void)showTableView {
