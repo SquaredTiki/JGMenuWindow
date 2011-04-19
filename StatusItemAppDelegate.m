@@ -14,20 +14,18 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
-//	[menuController setHeaderView:customView];
+	[menuController setHeaderView:customView];
 	[menuController setMenuDelegate:self];
 	[menuController setStatusItemTitle:@"Search"];
 //	[menuController setStatusItemImage:[NSImage imageNamed:@"img.png"]];
-	NSMutableArray *items = [[NSMutableArray alloc] init];
+/*	NSMutableArray *items = [[NSMutableArray alloc] init];
 	for (int i = 0; i < 6; i++) {
 		if (i==3)
 			[items addObject:[JGMenuItem seperatorItem]];
 		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:@selector(itemSelected)];
-//		if (i>2)
-//			[menuItem setImage:[NSImage imageNamed:@"img.png"]];
 		[items addObject:menuItem];
 	} 
-	[menuController setMenuItems:items];
+	[menuController setMenuItems:items]; */
 }
 
 #pragma mark Showing and Hiding Table
