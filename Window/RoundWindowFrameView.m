@@ -28,18 +28,21 @@
 	[[NSColor clearColor] set];
 	NSRectFill(rect);
 	
-	NSBezierPath *path;
-		
-		path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner];
-				
-	NSGradient* aGradient =
-		[[[NSGradient alloc]
-			initWithColorsAndLocations:
-				[NSColor colorWithDeviceWhite:1 alpha:0.97], (CGFloat)0.0,
-				[NSColor colorWithDeviceWhite:1 alpha:0.97], (CGFloat)1.0,
-				nil]
-		autorelease];
-	[aGradient drawInBezierPath:path angle:90];
+	if (kProMode == NO) {
+		NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner];
+		NSGradient* aGradient = [[[NSGradient alloc] initWithColorsAndLocations:
+					[NSColor colorWithDeviceWhite:1 alpha:0.97], (CGFloat)0.0,
+					[NSColor colorWithDeviceWhite:1 alpha:0.97], (CGFloat)1.0,
+					nil] autorelease];
+		[aGradient drawInBezierPath:path angle:90];
+	} else {
+		NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner];
+		NSGradient* aGradient = [[[NSGradient alloc] initWithColorsAndLocations:
+								  [NSColor colorWithDeviceWhite:0 alpha:0.97], (CGFloat)0.0,
+								  [NSColor colorWithDeviceWhite:0 alpha:0.97], (CGFloat)1.0,
+								  nil] autorelease];
+		[aGradient drawInBezierPath:path angle:90];
+	}
 }
 
 - (void)mouseMoved:(NSEvent*)theEvent
@@ -62,6 +65,18 @@
 		if ([tableDelegate respondsToSelector:@selector(mouseDownAtLocation:)])
 			[tableDelegate mouseDownAtLocation:location];	
 	}
+}
+
+- (void)keyUp:(NSEvent *)event {
+    NSString *chars = [event characters];
+    unichar character = [chars characterAtIndex: 0];
+	
+    if (character == 27) {
+		if ([tableDelegate respondsToSelector:@selector(escapeKeyPressed)])
+			[tableDelegate escapeKeyPressed];	
+    }
+	
+	[super keyUp:event];
 }
 
 @end

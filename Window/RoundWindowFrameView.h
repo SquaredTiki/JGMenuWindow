@@ -14,13 +14,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define WINDOW_FRAME_PADDING 0
+#define kProMode 0
 
 @protocol TableDetectionDelegate <NSObject>
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc;
 - (void)mouseMovedOutOfView;
 - (void)mouseDownAtLocation:(NSPoint)loc;
+- (void)escapeKeyPressed;
 
 @end
 

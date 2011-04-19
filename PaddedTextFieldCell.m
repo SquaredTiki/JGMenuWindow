@@ -14,7 +14,6 @@
 - (void)drawInteriorWithFrame:(NSRect)cellFrame
 					   inView:(NSView *)controlView
 {
-	NSLog(@"drawInterior");
 	if (leftMargin == 0)
 		leftMargin = 15;
 	cellFrame.origin.x += leftMargin;
@@ -51,7 +50,6 @@
 }
 
 - (void)setLeftMargin:(int)newMargin {
-	NSLog(@"set left margin");
 	leftMargin = newMargin;
 }
 

@@ -97,8 +97,8 @@
 		float width = 0;
 		for (JGMenuItem *item in menuItems) {
 			NSSize size = [item.title sizeWithAttributes:[NSDictionary dictionaryWithObject:[NSFont fontWithName: @"Lucida Grande" size: 13] forKey:NSFontAttributeName]];
-			if (size.width + 50 > width)
-				width = size.width + 50;
+			if (size.width + 40 > width)
+				width = size.width + 40;
 		}
 		headerView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, width, 0)];	
 	}	
@@ -192,7 +192,7 @@
 //	}
 	
 	for (JGMenuItem *item in menuItems) {
-		sizeOfCellsInTableView = sizeOfCellsInTableView + [itemsTable rectOfRow:[menuItems indexOfObject:item]].size.height;
+		sizeOfCellsInTableView += [itemsTable rectOfRow:[menuItems indexOfObject:item]].size.height;
 	}
 	
 	if ([menuItems count] != 0)
@@ -231,13 +231,12 @@
 	if ([menuItems count] != 0) {
 		NSRect tableOldFrame = itemsTable.frame;
 		tableOldFrame.origin.x = 0;
-		//	if (headerView.size.height = 0)
-		tableOldFrame.origin.y = -2;
+		tableOldFrame.origin.y = 0;
 		tableOldFrame.size.height = sizeOfCellsInTableView;
 		tableOldFrame.size.width = headerView.frame.size.width;
 		[itemsTable setFrame:tableOldFrame];
-		[[[itemsTable superview] superview] setFrame:tableOldFrame];
-	}
+		[[[itemsTable superview] superview] setFrame:NSMakeRect(tableOldFrame.origin.x, tableOldFrame.origin.y - 2, tableOldFrame.size.width, tableOldFrame.size.height)];
+ 	}
 }
 
 - (void)statusItemDeselected:(id)sender {
@@ -298,6 +297,10 @@
 	}
 }
 
+- (void)escapeKeyPressed {
+	[self closeWindow];
+}
+
 #pragma mark NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
@@ -345,7 +348,7 @@
 	if (mouseOverRow == rowIndex && ([aTableView selectedRow] != rowIndex)) {
 		if ([aTableView lockFocusIfCanDraw]) {
 			NSRect rowRect = [aTableView rectOfRow:rowIndex];
-			NSRect columnRect = [aTableView rectOfColumn:[[aTableView tableColumns] indexOfObject:aTableColumn]];
+			//NSRect columnRect = [aTableView rectOfColumn:[[aTableView tableColumns] indexOfObject:aTableColumn]];
 			
 			NSGradient* aGradient =
 			[[[NSGradient alloc]
@@ -354,8 +357,7 @@
 			  [NSColor colorWithDeviceRed:0.212 green:0.365 blue:0.949 alpha:1.000], (CGFloat)1.0,
 			  nil]
 			 autorelease];
-			NSRect rectToDraw = NSIntersectionRect(rowRect, columnRect);
-			NSLog(@"rowRect %@", NSStringFromRect(rowRect));
+			NSRect rectToDraw = rowRect;
 			rectToDraw.size.height = rowRect.size.height - 1;
 			rectToDraw.origin.y = rectToDraw.origin.y + 1;
 			[aGradient drawInRect:rectToDraw angle:90];
