@@ -16,7 +16,7 @@
 @end
 
 @implementation JGMenuWindowController
-@synthesize itemsTable, _headerView, menuDelegate;
+@synthesize itemsTable, _headerView, menuDelegate, proMode;
 @dynamic menuItems, headerView, statusItemImage, statusItemAlternateImage, statusItemTitle, isStatusItem;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName {
@@ -55,8 +55,16 @@
 #pragma mark Opening menu without status items
 
 - (void)popUpContextMenuAtPoint:(NSPoint)point {
+	if (timer) { // Window shouldn't be closing right now. Stop the timer.
+		[timer invalidate];
+        [timer release];
+        timer = nil;
+		[self.window setAlphaValue:1.0]; 
+	}
+	
 	[self loadHeightsWithWindowOrigin:point];
 	[(RoundWindowFrameView *)[[self.window contentView] superview] setAllCornersRounded:YES];
+	[(RoundWindowFrameView *)[[self.window contentView] superview] setProMode:proMode];
 	[self.window makeKeyAndOrderFront:self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
@@ -362,13 +370,23 @@
 }
 
 - (void)statusItemSelected:(id)sender {	
+	NSLog(@"selected");
+	
 	NSMenu *fakeMenu = [[NSMenu alloc] init]; // Used to make sure another menu such as Spotlight will disapear when this is opened
 	[statusItem popUpStatusItemMenu:fakeMenu];
+	
+	if (timer) { // Window shouldn't be closing right now. Stop the timer.
+		[timer invalidate];
+        [timer release];
+        timer = nil;
+		[self.window setAlphaValue:1.0]; 
+	}
 	
 	if ([menuDelegate respondsToSelector:@selector(menuWillOpen)])
 		[menuDelegate menuWillOpen];	
 	
 	[self loadHeights];
+	[(RoundWindowFrameView *)[[self.window contentView] superview] setProMode:proMode];
 	[self.window makeKeyAndOrderFront:self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
@@ -378,16 +396,23 @@
 - (void)flashHighlightForRowThenClose:(NSNumber *)row {
 	mouseOverRow = -1;
 	[itemsTable reloadData];
-	[self performSelector:@selector(resetMouseOverRowToAndClose:) withObject:row afterDelay:0.1];
+	timer = [[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(resetMouseOverRowToAndClose:) userInfo:row repeats:NO] retain];
 }
 
-- (void)resetMouseOverRowToAndClose:(NSNumber *)row {
-	mouseOverRow = [row intValue];
+- (void)resetMouseOverRowToAndClose:(NSTimer *)sender {
+	mouseOverRow = [[sender userInfo] intValue];
 	[itemsTable reloadData];
 	if ([menuDelegate respondsToSelector:@selector(shouldCloseMenuAfterSelectingRow:)]) {
-		if ([menuDelegate shouldCloseMenuAfterSelectingRow:[row intValue]])
+		if ([menuDelegate shouldCloseMenuAfterSelectingRow:[[sender userInfo] intValue]]) {
+			[timer invalidate];
+			[timer release];
+			timer = nil;
 			[self closeWindow];
+		}
 	} else {
+		[timer invalidate];
+        [timer release];
+        timer = nil;
 		[self closeWindow];
 	}
 }
@@ -455,7 +480,7 @@
 		rowRect.size.width = rowRect.size.width - 2;
 		rowRect.size.height = 1.0;
 		[[NSColor colorWithDeviceWhite:0.871 alpha:1.000] set];
-		if (kProMode)
+		if (proMode)
 			[[NSColor colorWithDeviceWhite:0.3 alpha:1.000] set];
 		NSRectFill(rowRect);
 		return;
@@ -468,7 +493,7 @@
 			NSRect rowRect = [aTableView rectOfRow:rowIndex];
 			//NSRect columnRect = [aTableView rectOfColumn:[[aTableView tableColumns] indexOfObject:aTableColumn]];
 			
-			if (!kProMode) {
+			if (!proMode) {
 				NSGradient* aGradient =
 				[[[NSGradient alloc]
 				  initWithColorsAndLocations:
@@ -517,7 +542,7 @@
 	} else {
 		[aCell setTextColor:[NSColor blackColor]];
 		
-		if (kProMode)
+		if (proMode)
 			[aCell setTextColor:[NSColor whiteColor]];
 	}
 	

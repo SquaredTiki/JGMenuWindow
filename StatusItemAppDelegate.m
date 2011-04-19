@@ -60,6 +60,7 @@
 		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:NULL];
 		[items addObject:menuItem];
 	} 
+	[subController setProMode:YES];
 	[subController setMenuItems:items];
 	[subController popUpContextMenuAtPoint:NSMakePoint(500, 500)];
 }

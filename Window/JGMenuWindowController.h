@@ -15,7 +15,6 @@
 #import "PaddedTextFieldCell.h"
 
 #define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#define kProMode 0
 
 @protocol JGMenuWindowDelegate <NSObject>
 
@@ -51,6 +50,7 @@
 	NSString *statusItemTitle; // Relayed to the customStatusView to set the Status Item title
 	
 	BOOL isStatusItem; // Default is YES
+	BOOL proMode; // Want your menu to look like those in the Apple Pro apps? then set this to YES!
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
@@ -62,6 +62,7 @@
 @property (nonatomic, copy) NSImage *statusItemAlternateImage;
 @property (nonatomic, copy) NSString *statusItemTitle;
 @property (nonatomic, assign) BOOL isStatusItem;
+@property (nonatomic, assign) BOOL proMode;
 
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
 - (void)closeWindow; // Close window with fade out

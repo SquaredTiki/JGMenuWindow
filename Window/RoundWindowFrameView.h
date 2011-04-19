@@ -29,9 +29,11 @@
 {
 	id <TableDetectionDelegate> tableDelegate;
 	BOOL allCornersRounded;
+	BOOL proMode;
 }
 
 @property (nonatomic, retain) id <TableDetectionDelegate> tableDelegate;
 @property (nonatomic, assign) BOOL allCornersRounded;
+@property (nonatomic, assign) BOOL proMode;
 
 @end

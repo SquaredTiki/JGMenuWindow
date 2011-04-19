@@ -17,6 +17,7 @@
 
 @implementation RoundWindowFrameView
 @synthesize tableDelegate;
+@dynamic allCornersRounded, proMode;
 
 //
 // drawRect:
@@ -28,7 +29,7 @@
 	[[NSColor clearColor] set];
 	NSRectFill(rect);
 	
-	if (kProMode == NO) {
+	if (proMode == NO) {
 		NSBezierPath *path;
 		
 		if (allCornersRounded)
@@ -66,6 +67,15 @@
 
 - (void)setAllCornersRounded:(BOOL)flag {
 	allCornersRounded = flag;
+	[self setNeedsDisplay:YES];
+}
+
+- (BOOL)proMode {
+	return proMode;
+}
+
+- (void)setProMode:(BOOL)flag {
+	proMode = flag;
 	[self setNeedsDisplay:YES];
 }
 
