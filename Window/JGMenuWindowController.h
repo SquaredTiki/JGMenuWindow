@@ -38,6 +38,8 @@
 	
 	NSTimer *timer; // PRIVATE: Used for fade out.
 	
+	float timeHovering;
+	
 	@public
 	
 	NSArray *menuItems; // An array of JGMenuItem's which can be set and which will be displayed

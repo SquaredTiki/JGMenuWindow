@@ -418,11 +418,23 @@
 }
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc {
+	[timer invalidate];
+	[timer release];
+	timer = nil;
+	timeHovering = 0;
+		
+	timer = [[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(upTime) userInfo:nil repeats:YES] retain];
+	
 	mouseOverRow = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
 	[itemsTable reloadData];
 }
 
 - (void)mouseMovedOutOfView {
+	[timer invalidate];
+	[timer release];
+	timer = nil;
+	timeHovering = 0;
+	
 	if (mouseOverRow != -1) {	
 		mouseOverRow = -1;
 		[itemsTable reloadData];
@@ -436,6 +448,10 @@
 		JGMenuItem *selectedItem = [menuItems objectAtIndex:row];
 		[[selectedItem target] performSelector:[selectedItem action] withObject:selectedItem];
 	}
+}
+
+- (void)upTime {
+	timeHovering += 0.1;
 }
 
 - (void)escapeKeyPressed {
@@ -470,7 +486,10 @@
 }
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
-{	
+{		
+	if (timeHovering > 1 && rowIndex == mouseOverRow)
+		return;
+	
 	// Draw seperator
 	
 	if ([[[menuItems objectAtIndex:rowIndex] title] isEqualToString:@"--[SEPERATOR]--"]) {
@@ -545,7 +564,7 @@
 		if (proMode)
 			[aCell setTextColor:[NSColor whiteColor]];
 	}
-	
+		
 	// Now Draw Image
 	
 	NSImage *image = [[menuItems objectAtIndex:rowIndex] image];
