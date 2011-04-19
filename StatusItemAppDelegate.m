@@ -52,6 +52,17 @@
 
 - (void)itemSelected {
 	NSLog(@"item selected");
+	JGMenuWindowController *subController = [[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"];
+	[subController setIsStatusItem:NO];
+	NSMutableArray *items = [[NSMutableArray alloc] init];
+	for (int i = 0; i < 6; i++) {
+		if (i==3)
+			[items addObject:[JGMenuItem seperatorItem]];
+		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:NULL];
+		[items addObject:menuItem];
+	} 
+	[subController setMenuItems:items];
+	[subController popUpContextMenuAtPoint:NSMakePoint(500, 500)];
 }
 
 #pragma mark JGMenuWindowDelegate

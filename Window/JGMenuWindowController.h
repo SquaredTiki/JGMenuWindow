@@ -49,6 +49,8 @@
 	NSImage *statusItemImage; // Relayed to the customStatusView to set the Status Item image
 	NSImage *statusItemAlternateImage; // Relayed to the customStatusView to set the Status Item alternate image
 	NSString *statusItemTitle; // Relayed to the customStatusView to set the Status Item title
+	
+	BOOL isStatusItem; // Default is YES
 }
 
 @property (assign) IBOutlet NSTableView *itemsTable;
@@ -59,8 +61,10 @@
 @property (nonatomic, copy) NSImage *statusItemImage;
 @property (nonatomic, copy) NSImage *statusItemAlternateImage;
 @property (nonatomic, copy) NSString *statusItemTitle;
+@property (nonatomic, assign) BOOL isStatusItem;
 
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
 - (void)closeWindow; // Close window with fade out
+- (void)popUpContextMenuAtPoint:(NSPoint)point;
 
 @end
