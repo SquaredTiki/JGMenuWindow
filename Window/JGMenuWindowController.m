@@ -234,18 +234,18 @@
 		tableOldFrame.origin.y = 0;
 		tableOldFrame.size.height = sizeOfCellsInTableView;
 		tableOldFrame.size.width = headerView.frame.size.width;
+		tableOldFrame = NSIntegralRect(tableOldFrame);
 		[itemsTable setFrame:tableOldFrame];
+		[[[itemsTable tableColumns] objectAtIndex:0] setWidth:tableOldFrame.size.width];
 		[[[itemsTable superview] superview] setFrame:NSMakeRect(tableOldFrame.origin.x, tableOldFrame.origin.y - 2, tableOldFrame.size.width, tableOldFrame.size.height)];
- 	}
+	}
 }
 
 - (void)statusItemDeselected:(id)sender {
 	[self closeWindow];
 }
 
-- (void)statusItemSelected:(id)sender {
-	NSLog(@"selected");
-	
+- (void)statusItemSelected:(id)sender {	
 	NSMenu *fakeMenu = [[NSMenu alloc] init]; // Used to make sure another menu such as Spotlight will disapear when this is opened
 	[statusItem popUpStatusItemMenu:fakeMenu];
 	
@@ -339,6 +339,8 @@
 		rowRect.size.width = rowRect.size.width - 2;
 		rowRect.size.height = 1.0;
 		[[NSColor colorWithDeviceWhite:0.871 alpha:1.000] set];
+		if (kProMode)
+			[[NSColor colorWithDeviceWhite:0.3 alpha:1.000] set];
 		NSRectFill(rowRect);
 		return;
 	}
@@ -350,36 +352,57 @@
 			NSRect rowRect = [aTableView rectOfRow:rowIndex];
 			//NSRect columnRect = [aTableView rectOfColumn:[[aTableView tableColumns] indexOfObject:aTableColumn]];
 			
-			NSGradient* aGradient =
-			[[[NSGradient alloc]
-			  initWithColorsAndLocations:
-			  [NSColor colorWithDeviceRed:0.416 green:0.529 blue:0.961 alpha:1.000], (CGFloat)0.0,
-			  [NSColor colorWithDeviceRed:0.212 green:0.365 blue:0.949 alpha:1.000], (CGFloat)1.0,
-			  nil]
-			 autorelease];
-			NSRect rectToDraw = rowRect;
-			rectToDraw.size.height = rowRect.size.height - 1;
-			rectToDraw.origin.y = rectToDraw.origin.y + 1;
-			[aGradient drawInRect:rectToDraw angle:90];
-			
-			NSRect upperLineRect = [aTableView rectOfRow:rowIndex];
-			upperLineRect.origin.y = upperLineRect.origin.y + 1;
-			upperLineRect.size.height = 1.0;
-			[[NSColor colorWithDeviceRed:0.376 green:0.498 blue:0.925 alpha:1.000] set];
-			NSRectFill(upperLineRect);
-			
-			NSRect lowerLineRect = [aTableView rectOfRow:rowIndex];
-			lowerLineRect.origin.y = NSMaxY(lowerLineRect) - 1;
-			lowerLineRect.size.height = 1.0;
-			[[NSColor colorWithDeviceRed:0.169 green:0.318 blue:0.914 alpha:1.000] set];
-			NSRectFill(lowerLineRect);
-			
-			[aTableView unlockFocus];
-			
-			[aCell setTextColor:[NSColor selectedMenuItemTextColor]];
+			if (!kProMode) {
+				NSGradient* aGradient =
+				[[[NSGradient alloc]
+				  initWithColorsAndLocations:
+				  [NSColor colorWithDeviceRed:0.416 green:0.529 blue:0.961 alpha:1.000], (CGFloat)0.0,
+				  [NSColor colorWithDeviceRed:0.212 green:0.365 blue:0.949 alpha:1.000], (CGFloat)1.0,
+				  nil]
+				 autorelease];
+				NSRect rectToDraw = rowRect;
+				rectToDraw.size.height = rowRect.size.height - 1;
+				rectToDraw.origin.y = rectToDraw.origin.y + 1;
+				[aGradient drawInRect:rectToDraw angle:90];
+				
+				NSRect upperLineRect = [aTableView rectOfRow:rowIndex];
+				upperLineRect.origin.y = upperLineRect.origin.y + 1;
+				upperLineRect.size.height = 1.0;
+				[[NSColor colorWithDeviceRed:0.376 green:0.498 blue:0.925 alpha:1.000] set];
+				NSRectFill(upperLineRect);
+				
+				NSRect lowerLineRect = [aTableView rectOfRow:rowIndex];
+				lowerLineRect.origin.y = NSMaxY(lowerLineRect) - 1;
+				lowerLineRect.size.height = 1.0;
+				[[NSColor colorWithDeviceRed:0.169 green:0.318 blue:0.914 alpha:1.000] set];
+				NSRectFill(lowerLineRect);
+				
+				[aTableView unlockFocus];
+				
+				[aCell setTextColor:[NSColor selectedMenuItemTextColor]];
+			} else {
+				NSGradient* aGradient =
+				[[[NSGradient alloc]
+				  initWithColorsAndLocations:
+				  [NSColor colorWithDeviceWhite:0.925 alpha:1.000], (CGFloat)0.0,
+				  [NSColor colorWithDeviceWhite:0.753 alpha:1.000], (CGFloat)1.0,
+				  nil]
+				 autorelease];
+				NSRect rectToDraw = rowRect;
+				rectToDraw.size.height = rowRect.size.height - 1;
+				rectToDraw.origin.y = rectToDraw.origin.y + 1;
+				[aGradient drawInRect:rectToDraw angle:90];
+				
+				[aTableView unlockFocus];
+				
+				[aCell setTextColor:[NSColor blackColor]];
+			}
 		}
 	} else {
 		[aCell setTextColor:[NSColor blackColor]];
+		
+		if (kProMode)
+			[aCell setTextColor:[NSColor whiteColor]];
 	}
 	
 	// Now Draw Image

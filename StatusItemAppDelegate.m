@@ -23,8 +23,8 @@
 		if (i==3)
 			[items addObject:[JGMenuItem seperatorItem]];
 		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:@selector(itemSelected)];
-		if (i>2)
-			[menuItem setImage:[NSImage imageNamed:@"img.png"]];
+//		if (i>2)
+//			[menuItem setImage:[NSImage imageNamed:@"img.png"]];
 		[items addObject:menuItem];
 	} 
 	[menuController setMenuItems:items];

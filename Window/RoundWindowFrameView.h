@@ -14,8 +14,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define kProMode 0
-
 @protocol TableDetectionDelegate <NSObject>
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc;
@@ -25,6 +23,7 @@
 
 @end
 
+#import "JGMenuWindowController.h"
 
 @interface RoundWindowFrameView : NSView
 {

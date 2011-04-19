@@ -15,6 +15,7 @@
 #import "PaddedTextFieldCell.h"
 
 #define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define kProMode 0
 
 @protocol JGMenuWindowDelegate <NSObject>
 
@@ -24,7 +25,6 @@
 - (BOOL)shouldCloseMenuAfterSelectingRow:(int)row;
 
 @end
-
 
 @interface JGMenuWindowController : NSWindowController <NSWindowDelegate, TableDetectionDelegate> {	
 	@private /* PRIVATE VARIABLES */
