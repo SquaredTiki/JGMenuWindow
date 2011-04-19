@@ -16,12 +16,19 @@ This will create the status item in the menu bar and set up all the actions for 
 
 The project is simply a demo which shows how it can be used in a similar fashion to Spotlight. If you are unsure how to use it just check the demo out.
 
+# What Makes it better than a normal NSMenu?
+
+The main advantages over a normal NSMenu are:
+
+- live updating of menu items
+- fully responsive text fields (or anything that uses a field editor)
+
+But most importantly it is **fully customizable** which would allow you to **replicate the Apple Pro menu's**.
+
 # Limitations
 
 As this was only a quick project there are some limitations: 
 
-- the status item doesn't have a title and has just a gray background
-- you cannot set an image for each item (because of `NSTableView`)
 - you cannot set a custom view for each item (because of `NSTableView`)
 
 # Screenshot
