@@ -22,8 +22,9 @@ The main advantages over a normal NSMenu are:
 
 - live updating of menu items
 - fully responsive text fields (or anything that uses a field editor)
+- has option to appear as an Apple Pro menu
 
-But most importantly it is **fully customizable** which would allow you to **replicate the Apple Pro menu's**.
+But most importantly it is **fully customizable** which the Apple Pro menu option stands an example of.
 
 # Limitations
 
