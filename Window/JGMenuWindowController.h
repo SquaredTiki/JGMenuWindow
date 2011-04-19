@@ -12,6 +12,7 @@
 #import "DetectingTableView.h"
 #import "BorderlessWindow.h"
 #import "JGMenuItem.h"
+#import "PaddedTextFieldCell.h"
 
 #define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 

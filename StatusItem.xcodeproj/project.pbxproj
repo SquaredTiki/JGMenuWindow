@@ -12,6 +12,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AF068675135D76240099C76F /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = AF068674135D76240099C76F /* img.png */; };
 		AFB0BF31135ACD09009E9BFF /* PaddedTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB0BF30135ACD09009E9BFF /* PaddedTextFieldCell.m */; };
 		AFB0C1CF135B4D3F009E9BFF /* JGMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB0C1CE135B4D3F009E9BFF /* JGMenuItem.m */; };
 		AFC6E46E135786800022B65F /* DetectingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC6E46D135786800022B65F /* DetectingTableView.m */; };
@@ -37,6 +38,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* StatusItem-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StatusItem-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* StatusItem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusItem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF068674135D76240099C76F /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 		AFB0BF2F135ACD09009E9BFF /* PaddedTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddedTextFieldCell.h; sourceTree = "<group>"; };
 		AFB0BF30135ACD09009E9BFF /* PaddedTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddedTextFieldCell.m; sourceTree = "<group>"; };
 		AFB0C1CD135B4D3F009E9BFF /* JGMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGMenuItem.h; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF068674135D76240099C76F /* img.png */,
 				8D1107310486CEB800E47090 /* StatusItem-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -241,6 +244,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				AFE5C656135A01B500081B00 /* JGMenuWindow.xib in Resources */,
+				AF068675135D76240099C76F /* img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

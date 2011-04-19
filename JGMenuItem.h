@@ -13,11 +13,13 @@
 	NSString *title;
 	id target;
 	SEL action;
+	NSImage *image;
 }
 
 @property (nonatomic, retain, readonly) NSString *title;
 @property (nonatomic, assign, readonly) id target;
 @property (nonatomic, assign, readonly) SEL action;
+@property (nonatomic, copy) NSImage *image;
 
 - (id)initWithTitle:(NSString *)title target:(id)target action:(SEL)action;
 + (NSString *)seperatorItem; 

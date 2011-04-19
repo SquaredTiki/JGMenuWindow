@@ -10,7 +10,9 @@
 
 
 @interface PaddedTextFieldCell : NSTextFieldCell {
-
+	int leftMargin;
 }
+
+@property (nonatomic, assign) int leftMargin;
 
 @end

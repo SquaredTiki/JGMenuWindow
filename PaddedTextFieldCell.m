@@ -8,16 +8,17 @@
 
 #import "PaddedTextFieldCell.h"
 
-
 @implementation PaddedTextFieldCell
-
-#define kLeftMargin 15.0
+@dynamic leftMargin;
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame
 					   inView:(NSView *)controlView
 {
-	cellFrame.origin.x += kLeftMargin;
-	cellFrame.size.width -= kLeftMargin;
+	NSLog(@"drawInterior");
+	if (leftMargin == 0)
+		leftMargin = 15;
+	cellFrame.origin.x += leftMargin;
+	cellFrame.size.width -= leftMargin;
 	[super drawInteriorWithFrame:cellFrame
 						  inView:controlView];
 }
@@ -29,8 +30,8 @@
 				  start:(NSInteger)selStart
 				 length:(NSInteger)selLength
 {
-	aRect.origin.x += kLeftMargin;
-	aRect.size.width -= kLeftMargin;
+	aRect.origin.x += leftMargin;
+	aRect.size.width -= leftMargin;
 	[super selectWithFrame:aRect
 					inView:controlView
 					editor:textObj
@@ -43,6 +44,15 @@
 						cellFrame:(NSRect)cellFrame
 {
 	return [[self controlView] bounds];
+}
+
+- (int)leftMargin {
+	return leftMargin;
+}
+
+- (void)setLeftMargin:(int)newMargin {
+	NSLog(@"set left margin");
+	leftMargin = newMargin;
 }
 
 @end

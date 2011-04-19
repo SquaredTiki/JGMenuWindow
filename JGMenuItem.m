@@ -10,6 +10,7 @@
 
 @implementation JGMenuItem
 @synthesize title, target, action;
+@dynamic image;
 
 - (id)initWithTitle:(NSString *)str target:(id)trg action:(SEL)act {
 	self = [super init];
@@ -23,6 +24,15 @@
 
 + (NSString *)seperatorItem {
 	return [[self alloc] initWithTitle:@"--[SEPERATOR]--" target:NULL action:NULL];
+}
+
+- (NSImage *)image {
+	return image;
+}
+
+- (void)setImage:(NSImage *)newImage {
+	[image release];
+	image = [newImage copy];
 }
 
 @end

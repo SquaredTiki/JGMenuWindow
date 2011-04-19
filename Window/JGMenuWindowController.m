@@ -192,11 +192,7 @@
 //	}
 	
 	for (JGMenuItem *item in menuItems) {
-		if ([[item title] isEqualToString:@"--[SEPERATOR]--"]) {
-			sizeOfCellsInTableView = sizeOfCellsInTableView + 12;
-		} else {
-			sizeOfCellsInTableView = sizeOfCellsInTableView + 20;
-		}
+		sizeOfCellsInTableView = sizeOfCellsInTableView + [itemsTable rectOfRow:[menuItems indexOfObject:item]].size.height;
 	}
 	
 	if ([menuItems count] != 0)
@@ -319,6 +315,9 @@
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)rowIndex {
 	if ([[[menuItems objectAtIndex:rowIndex] title] isEqualToString:@"--[SEPERATOR]--"])
 		return 10;
+	if ([[menuItems objectAtIndex:rowIndex] image] != nil)
+		if ([[menuItems objectAtIndex:rowIndex] image].size.height + 2 >= 18)
+			return [[menuItems objectAtIndex:rowIndex] image].size.height + 2; // 2 for padding specificially got 16*16 images
 	return 18;
 }
 
@@ -328,6 +327,8 @@
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {	
+	// Draw seperator
+	
 	if ([[[menuItems objectAtIndex:rowIndex] title] isEqualToString:@"--[SEPERATOR]--"]) {
 		NSRect rowRect = [aTableView rectOfRow:rowIndex];
 		rowRect.origin.x = 1;
@@ -338,6 +339,8 @@
 		NSRectFill(rowRect);
 		return;
 	}
+	
+	// Draw highlight
 	
 	if (mouseOverRow == rowIndex && ([aTableView selectedRow] != rowIndex)) {
 		if ([aTableView lockFocusIfCanDraw]) {
@@ -352,7 +355,8 @@
 			  nil]
 			 autorelease];
 			NSRect rectToDraw = NSIntersectionRect(rowRect, columnRect);
-			rectToDraw.size.height = 19;
+			NSLog(@"rowRect %@", NSStringFromRect(rowRect));
+			rectToDraw.size.height = rowRect.size.height - 1;
 			rectToDraw.origin.y = rectToDraw.origin.y + 1;
 			[aGradient drawInRect:rectToDraw angle:90];
 			
@@ -374,6 +378,25 @@
 		}
 	} else {
 		[aCell setTextColor:[NSColor blackColor]];
+	}
+	
+	// Now Draw Image
+	
+	NSImage *image = [[menuItems objectAtIndex:rowIndex] image];
+	
+	if (image) {
+		NSRect rowRect = [aTableView rectOfRow:rowIndex];
+		NSRect centeredRect = NSMakeRect(0, 0, [image size].width, [image size].height);
+		centeredRect.origin.x = 17;
+		centeredRect.origin.y = NSMidY(rowRect) - (([image size].height / 2) - 1);
+		centeredRect = NSIntegralRect(centeredRect);
+		[image setFlipped:YES];
+		[image drawAtPoint:centeredRect.origin fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+		
+		// Pad the text accross further
+		[(PaddedTextFieldCell *)aCell setLeftMargin:15 + image.size.width + 3];
+	} else {
+		[(PaddedTextFieldCell *)aCell setLeftMargin:15];	
 	}
 }
 
