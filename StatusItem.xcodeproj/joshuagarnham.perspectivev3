@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>AF0689F5135DCD230099C76F</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>StatusItemAppDelegate.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>AF0689F6135DCD230099C76F</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>StatusItemAppDelegate.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>AF068B06135DF2430099C76F</string>
-						<key>history</key>
-						<array>
-							<string>AF0689EE135DCD100099C76F</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {750, 461}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 271 750 502 0 0 1280 778 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>1280</integer>
@@ -367,34 +326,34 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AF068B05135DF2430099C76F</string>
+										<string>AF068CD9135E03930099C76F</string>
 										<key>history</key>
 										<array>
 											<string>AFA4C5B21356DEE900C0D3CE</string>
 											<string>AF998F641358993B00ACB3E5</string>
 											<string>AF998F651358993B00ACB3E5</string>
 											<string>AFB0C34D135B5802009E9BFF</string>
-											<string>AF0680A2135C7DC90099C76F</string>
-											<string>AF068546135D6B000099C76F</string>
 											<string>AF068589135D6D020099C76F</string>
 											<string>AF068635135D74760099C76F</string>
 											<string>AF068748135DB2F10099C76F</string>
 											<string>AF0687DB135DBA560099C76F</string>
 											<string>AF0687DC135DBA560099C76F</string>
-											<string>AF06880C135DBB110099C76F</string>
 											<string>AF0688DF135DC0570099C76F</string>
 											<string>AF0688E0135DC0570099C76F</string>
 											<string>AF068925135DC2DE0099C76F</string>
 											<string>AF068942135DC3450099C76F</string>
-											<string>AF068989135DC75F0099C76F</string>
-											<string>AF0689CE135DCC350099C76F</string>
 											<string>AF0689D5135DCC510099C76F</string>
-											<string>AF0689D6135DCC510099C76F</string>
-											<string>AF0689EF135DCD200099C76F</string>
-											<string>AF068A22135DCFF30099C76F</string>
-											<string>AF068A23135DCFF30099C76F</string>
-											<string>AF068ADB135DF10A0099C76F</string>
-											<string>AF068AFE135DF2270099C76F</string>
+											<string>AF068B18135DF4160099C76F</string>
+											<string>AF068B34135DF49A0099C76F</string>
+											<string>AF068B69135DF5F20099C76F</string>
+											<string>AF068C7E135E004F0099C76F</string>
+											<string>AF068C8B135E00C00099C76F</string>
+											<string>AF068C8C135E00C00099C76F</string>
+											<string>AF068C8E135E00C00099C76F</string>
+											<string>AF068CA1135E01A90099C76F</string>
+											<string>AF068CA2135E01A90099C76F</string>
+											<string>AF068CCE135E03550099C76F</string>
+											<string>AF068CD5135E037F0099C76F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -712,10 +671,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AF068B04135DF2380099C76F</string>
+		<string>AF068CDA135E03930099C76F</string>
 		<string>AF068755135DB2F10099C76F</string>
 		<string>AF068756135DB2F10099C76F</string>
-		<string>AF0689F5135DCD230099C76F</string>
 		<string>/Users/joshuagarnham/Desktop/Projects/Obj-C/Tests/StatusItem/StatusItem.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

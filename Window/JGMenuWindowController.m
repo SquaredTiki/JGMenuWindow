@@ -385,6 +385,9 @@
 	if ([menuDelegate respondsToSelector:@selector(menuWillOpen)])
 		[menuDelegate menuWillOpen];	
 	
+	mouseOverRow = -1;
+	isSelecting = NO;
+	
 	[self loadHeights];
 	[(RoundWindowFrameView *)[[self.window contentView] superview] setProMode:proMode];
 	[self.window makeKeyAndOrderFront:self];
@@ -444,9 +447,11 @@
 - (void)mouseDownAtLocation:(NSPoint)loc {
 	int row = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
 	if (row >= 0) {
+		isSelecting = YES;
 		[self flashHighlightForRowThenClose:[NSNumber numberWithInt:row]];
 		JGMenuItem *selectedItem = [menuItems objectAtIndex:row];
 		[[selectedItem target] performSelector:[selectedItem action] withObject:selectedItem];
+		[itemsTable reloadData];
 	}
 }
 
@@ -487,12 +492,20 @@
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {		
-	if (timeHovering > 1 && rowIndex == mouseOverRow)
+	if (timeHovering > 1 && rowIndex == mouseOverRow && isSelecting == NO) {
 		return;
+	}
+	
+	JGMenuItem *item = [menuItems objectAtIndex:rowIndex];
+		
+	if (item.enabled == NO) {
+		[aCell setTextColor:[NSColor colorWithDeviceRed:0.502 green:0.502 blue:0.565 alpha:1.000]];
+		return;
+	}
 	
 	// Draw seperator
 	
-	if ([[[menuItems objectAtIndex:rowIndex] title] isEqualToString:@"--[SEPERATOR]--"]) {
+	if ([[item title] isEqualToString:@"--[SEPERATOR]--"]) {
 		NSRect rowRect = [aTableView rectOfRow:rowIndex];
 		rowRect.origin.x = 1;
 		rowRect.origin.y += (int) (NSHeight(rowRect)/2);
@@ -507,7 +520,7 @@
 	
 	// Draw highlight
 	
-	if (mouseOverRow == rowIndex && ([aTableView selectedRow] != rowIndex)) {
+	if (mouseOverRow == rowIndex && ([aTableView selectedRow] != rowIndex) && item.enabled == YES) {
 		if ([aTableView lockFocusIfCanDraw]) {
 			NSRect rowRect = [aTableView rectOfRow:rowIndex];
 			//NSRect columnRect = [aTableView rectOfColumn:[[aTableView tableColumns] indexOfObject:aTableColumn]];
@@ -558,9 +571,9 @@
 				[aCell setTextColor:[NSColor blackColor]];
 			}
 		}
-	} else {
+	} else if (item.enabled == YES) {
 		[aCell setTextColor:[NSColor blackColor]];
-		
+
 		if (proMode)
 			[aCell setTextColor:[NSColor whiteColor]];
 	}

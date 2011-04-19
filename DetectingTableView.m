@@ -26,6 +26,7 @@
 - (void)mouseDown:(NSEvent *)event {
 	// Pass it on to window controller view
 	[[[[self window] contentView] superview] mouseDownInTableViewWithEvent:event];
+//	[super mouseDown:event];
 }
 
 @end

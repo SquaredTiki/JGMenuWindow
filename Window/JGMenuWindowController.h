@@ -38,7 +38,8 @@
 	
 	NSTimer *timer; // PRIVATE: Used for fade out.
 	
-	float timeHovering;
+	float timeHovering; // PRIVATE: Amount of time hovering on a single point USED TO PREVENT DRAWING ISSUE
+	BOOL isSelecting; // PRIVATE: Whether or not is selecting
 	
 	@public
 	
