@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Debug</string>
+	<string>Project</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,8 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
-									<integer>7</integer>
+									<integer>25</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -299,6 +300,8 @@
 							<string>MainColumn</string>
 							<real>345</real>
 						</array>
+						<key>RubberWindowFrame</key>
+						<string>0 143 1280 635 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -326,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AF0689A4135DC9340099C76F</string>
+										<string>AF0689BC135DCADA0099C76F</string>
 										<key>history</key>
 										<array>
 											<string>AFA4C5B21356DEE900C0D3CE</string>
@@ -348,12 +351,12 @@
 											<string>AF06891A135DC29B0099C76F</string>
 											<string>AF068925135DC2DE0099C76F</string>
 											<string>AF068942135DC3450099C76F</string>
-											<string>AF068976135DC7330099C76F</string>
-											<string>AF068977135DC7330099C76F</string>
 											<string>AF068989135DC75F0099C76F</string>
-											<string>AF068992135DC8840099C76F</string>
-											<string>AF068999135DC9150099C76F</string>
-											<string>AF06899A135DC9150099C76F</string>
+											<string>AF0689B2135DCAC80099C76F</string>
+											<string>AF0689B3135DCAC80099C76F</string>
+											<string>AF0689B4135DCAC80099C76F</string>
+											<string>AF0689B5135DCAC80099C76F</string>
+											<string>AF0689BB135DCAD80099C76F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -367,16 +370,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {913, 412}}</string>
+								<string>{{0, 0}, {913, 589}}</string>
+								<key>RubberWindowFrame</key>
+								<string>0 143 1280 635 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>412pt</string>
+							<string>589pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>177pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -444,7 +449,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {913, 150}}</string>
+										<string>{{10, 27}, {913, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 143 1280 635 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -525,8 +532,6 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1280, 141}}</string>
-						<key>RubberWindowFrame</key>
-						<string>0 143 1280 635 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -601,11 +606,7 @@
 							</array>
 							<key>Frame</key>
 							<string>{{625, 0}, {655, 219}}</string>
-							<key>RubberWindowFrame</key>
-							<string>0 143 1280 635 0 0 1280 778 </string>
 						</dict>
-						<key>RubberWindowFrame</key>
-						<string>0 143 1280 635 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -669,7 +670,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AF0689A5135DC9340099C76F</string>
 		<string>AF068755135DB2F10099C76F</string>
 		<string>AF068756135DB2F10099C76F</string>
 		<string>/Users/joshuagarnham/Desktop/Projects/Obj-C/Tests/StatusItem/StatusItem.xcodeproj</string>

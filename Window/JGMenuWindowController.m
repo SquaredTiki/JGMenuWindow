@@ -56,6 +56,7 @@
 
 - (void)popUpContextMenuAtPoint:(NSPoint)point {
 	[self loadHeightsWithWindowOrigin:point];
+	[(RoundWindowFrameView *)[[self.window contentView] superview] setAllCornersRounded:YES];
 	[self.window makeKeyAndOrderFront:self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }

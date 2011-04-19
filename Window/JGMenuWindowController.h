@@ -65,6 +65,6 @@
 
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
 - (void)closeWindow; // Close window with fade out
-- (void)popUpContextMenuAtPoint:(NSPoint)point;
+- (void)popUpContextMenuAtPoint:(NSPoint)point; // Pop up the menu at a specific point
 
 @end

@@ -28,8 +28,10 @@
 @interface RoundWindowFrameView : NSView
 {
 	id <TableDetectionDelegate> tableDelegate;
+	BOOL allCornersRounded;
 }
 
 @property (nonatomic, retain) id <TableDetectionDelegate> tableDelegate;
+@property (nonatomic, assign) BOOL allCornersRounded;
 
 @end

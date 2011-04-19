@@ -51,7 +51,6 @@
 }
 
 - (void)itemSelected {
-	NSLog(@"item selected");
 	JGMenuWindowController *subController = [[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"];
 	[subController setIsStatusItem:NO];
 	NSMutableArray *items = [[NSMutableArray alloc] init];
