@@ -35,14 +35,20 @@
 	for (int i = 0; i < 6; i++) {
 		if (i==3)
 			[items addObject:[JGMenuItem seperatorItem]];
-		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:NULL];
+		JGMenuItem *menuItem = [[JGMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Result %i", i] target:self action:@selector(itemSelected)];
 		if (i==2) {
 			JGMenuItem *title = [[JGMenuItem alloc] initWithTitle:@"You can't select me." target:nil action:NULL];
 			[title setEnabled:NO];
 			[items addObject:title];
 		}
-		if (i==3)
+		if (i==3) {
 			[menuItem setImage:[NSImage imageNamed:@"img.png"]];
+			JGMenuWindowController *subController = [[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"];
+			[subController setIsStatusItem:NO];
+			JGMenuItem *subItem = [[JGMenuItem alloc] initWithTitle:@"i'm a lone sub item :(" target:self action:NULL];
+			[subController setMenuItems:[NSArray arrayWithObject:subItem]];
+			[menuItem setSubmenu:subController];
+		}
 		[items addObject:menuItem];
 	} 
 	[menuController setMenuItems:items];

@@ -11,12 +11,12 @@
 @interface JGMenuWindowController()
 
 - (void)loadHeights;
-- (void)loadHeightsWithWindowOrigin:(NSPoint)origin;
+- (BOOL)loadHeightsWithWindowOrigin:(NSPoint)origin whichIsSubmenu:(BOOL)isSubmenu;
 
 @end
 
 @implementation JGMenuWindowController
-@synthesize itemsTable, _headerView, menuDelegate, proMode;
+@synthesize itemsTable, _headerView, menuDelegate, proMode, parentMenu, mouseOverRow;
 @dynamic menuItems, headerView, statusItemImage, statusItemAlternateImage, statusItemTitle, isStatusItem;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName {
@@ -62,22 +62,75 @@
 		[self.window setAlphaValue:1.0]; 
 	}
 	
-	[self loadHeightsWithWindowOrigin:point];
+	[self loadHeightsWithWindowOrigin:point whichIsSubmenu:NO];
 	[(RoundWindowFrameView *)[[self.window contentView] superview] setAllCornersRounded:YES];
 	[(RoundWindowFrameView *)[[self.window contentView] superview] setProMode:proMode];
 	[self.window makeKeyAndOrderFront:self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
 
+#pragma mark Dealing with submenu's
+
+- (void)popUpSubmenuAtPoint:(NSPoint)point whichIsSide:(int)preferedSide {
+	if (timer) { // Window shouldn't be closing right now. Stop the timer.
+		[timer invalidate];
+        [timer release];
+        timer = nil;
+		[self.window setAlphaValue:1.0]; 
+	}
+	
+	BOOL side = ![self loadHeightsWithWindowOrigin:point whichIsSubmenu:YES]; // Returns 0 = right while we want 0 = left
+	NSLog(@"side = %i", side);
+	[(RoundWindowFrameView *)[[self.window contentView] superview] setIsSubmenuOnSide:side];
+	[(RoundWindowFrameView *)[[self.window contentView] superview] setProMode:proMode];
+	[self.window makeKeyAndOrderFront:self];
+	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+}
+
+- (void)displaySubmenuForRow:(NSNumber *)numRow {
+	int row = [numRow intValue];
+	
+	if (mouseOverRow == row) {
+		if (itemWithOpenSubmenu == nil) {
+			JGMenuItem *item = [menuItems objectAtIndex:row];
+			
+			itemWithOpenSubmenu = item; // Do it before so as to ensure main menu does not close
+			
+			NSRect rectOfSubmenuRow = [itemsTable rectOfRow:row];
+			NSRect windowConvert = [[self.window.contentView superview] convertRect:rectOfSubmenuRow fromView:itemsTable];
+			NSRect screenConvert = NSMakeRect(self.window.frame.origin.x + windowConvert.origin.x, self.window.frame.origin.y + windowConvert.origin.y, rectOfSubmenuRow.size.width, rectOfSubmenuRow.size.height);
+			
+			[[item submenu] setParentMenu:self];
+			[[item submenu] popUpSubmenuAtPoint:NSMakePoint(screenConvert.origin.x + self.window.frame.size.width, screenConvert.origin.y - 4) whichIsSide:0];
+			
+			[itemsTable reloadData];
+		}
+	}
+}
+
 #pragma mark Handling changes to the window
 
+- (void)windowDidBecomeKey:(NSNotification *)notification {
+	isMovingBackToParent = NO;	
+}
+
 - (void)windowDidResignKey:(NSNotification *)notification {
-	[self closeWindow];
+	if (itemWithOpenSubmenu != nil)
+		return;
+	else {
+		NSLog(@"SELF window");
+		[self closeWindow];
+	}
 }
 
 - (void)closeWindow {
 	if ([menuDelegate respondsToSelector:@selector(menuWillClose)])
 		[menuDelegate menuWillClose];	
+	
+	if (parentMenu != nil && !isMovingBackToParent) {
+	//	NSLog(@"close above menu");
+		[parentMenu closeWindow];
+	} 
 	
     timer = [[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(fade:) userInfo:nil repeats:YES] retain];
 	[customStatusView setHighlighted:NO];
@@ -93,6 +146,8 @@
         [timer invalidate];
         [timer release];
         timer = nil;
+		
+	//	NSLog(@"called");
         
         [self.window close];
         
@@ -115,8 +170,11 @@
 		float width = 0;
 		for (JGMenuItem *item in menuItems) {
 			NSSize size = [item.title sizeWithAttributes:[NSDictionary dictionaryWithObject:[NSFont fontWithName: @"Lucida Grande" size: 13] forKey:NSFontAttributeName]];
-			if (size.width + 40 > width)
-				width = size.width + 40;
+			int amountToAdd = 40;
+			if (item.submenu != nil)
+				amountToAdd += 15;
+			if (size.width + amountToAdd > width)
+				width = size.width + amountToAdd;
 		}
 		headerView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, width, 0)];	
 	}	
@@ -207,7 +265,7 @@
 	}
 }
 
-- (void)loadHeightsWithWindowOrigin:(NSPoint)point {
+- (BOOL)loadHeightsWithWindowOrigin:(NSPoint)point whichIsSubmenu:(BOOL)isSubmenu {
 	NSRect newFrame = [[customStatusView window] frame];
 	
 	// Work out the _headerView's (basically a container) frame from the actually headerView frame
@@ -256,13 +314,14 @@
 	
 	BOOL whichSide = 0; // 0 = shown to the right, 1 = shown to the left
 	NSRect screenRect = [[NSScreen mainScreen] frame];
-	NSRect statusItemRect = [[customStatusView window] frame];
 	
-	if ((statusItemRect.origin.x + headerView.frame.size.width) > screenRect.size.width)
+	if ((newFrame.origin.x + newFrame.size.width) > screenRect.size.width)
 		whichSide = 1;
 	
-	if (whichSide) {
-		xOrigin = xOrigin - self.window.frame.size.width + customStatusView.frame.size.width;
+	NSLog(@"%i && %i && %i", whichSide, isSubmenu, parentMenu != nil);
+	if (whichSide && isSubmenu && parentMenu != nil) {
+		NSLog(@"is changing");
+		xOrigin = xOrigin - parentMenu.window.frame.size.width - newFrame.size.width;
 	}
 	
 	newFrame.origin.x = xOrigin;
@@ -284,6 +343,8 @@
 		[[[itemsTable tableColumns] objectAtIndex:0] setWidth:tableOldFrame.size.width];
 		[[[itemsTable superview] superview] setFrame:NSMakeRect(tableOldFrame.origin.x, tableOldFrame.origin.y - 2, tableOldFrame.size.width, tableOldFrame.size.height)];
 	}
+	
+	return whichSide;
 }
 
 - (void)loadHeights {	
@@ -427,20 +488,47 @@
 	timeHovering = 0;
 		
 	timer = [[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(upTime) userInfo:nil repeats:YES] retain];
-	
+		
 	mouseOverRow = [itemsTable rowAtPoint:[itemsTable convertPoint:loc fromView:nil]];
+		
+	if (itemWithOpenSubmenu != nil && mouseOverRow != [menuItems indexOfObject:itemWithOpenSubmenu]) {
+		itemWithOpenSubmenu = nil;
+	}
+	
 	[itemsTable reloadData];
 }
 
-- (void)mouseMovedOutOfView {
+- (void)mouseMovedOutOfViewToLoc:(NSPoint)loc {	
 	[timer invalidate];
 	[timer release];
 	timer = nil;
 	timeHovering = 0;
 	
-	if (mouseOverRow != -1) {	
+	if (mouseOverRow != -1 && itemWithOpenSubmenu == nil) {	
 		mouseOverRow = -1;
 		[itemsTable reloadData];
+	}
+		
+	NSPoint convertedLoc = NSMakePoint(self.window.frame.origin.x + loc.x, self.window.frame.origin.y + loc.y);
+		
+//	NSLog(@"parentMenuOrigin = %@", NSStringFromPoint([parentMenu window].frame.origin));
+//	NSLog(@"convertedLoc = %@", NSStringFromPoint(convertedLoc));
+	
+	if (parentMenu != nil) {
+		// i know i'm a submenu
+		if (convertedLoc.x > parentMenu.window.frame.origin.x && convertedLoc.y > parentMenu.window.frame.origin.y && convertedLoc.x < parentMenu.window.frame.origin.x + parentMenu.window.frame.size.width && convertedLoc.y < parentMenu.window.frame.origin.y + parentMenu.window.frame.size.height) {			
+			int mouseAtLoc = [parentMenu.itemsTable rowAtPoint:[parentMenu.itemsTable convertPoint:[parentMenu.window convertScreenToBase:convertedLoc] fromView:nil]];
+			if (mouseAtLoc == parentMenu.mouseOverRow)
+				return;
+			
+			isMovingBackToParent = YES;
+			[parentMenu.window makeKeyAndOrderFront:self];
+		}
+	} else {
+		// i may be the main menu but i still need to respect my little brother and make him active if the mouse heads towards him. i'm nice aren't i?
+		if (convertedLoc.x > itemWithOpenSubmenu.submenu.window.frame.origin.x && convertedLoc.y > itemWithOpenSubmenu.submenu.window.frame.origin.y && convertedLoc.x < itemWithOpenSubmenu.submenu.window.frame.origin.x + itemWithOpenSubmenu.submenu.window.frame.size.width && convertedLoc.y < itemWithOpenSubmenu.submenu.window.frame.origin.y + itemWithOpenSubmenu.submenu.window.frame.size.height) {
+			[itemWithOpenSubmenu.submenu.window makeKeyAndOrderFront:self];
+		}
 	}
 }
 
@@ -451,12 +539,16 @@
 		[self flashHighlightForRowThenClose:[NSNumber numberWithInt:row]];
 		JGMenuItem *selectedItem = [menuItems objectAtIndex:row];
 		[[selectedItem target] performSelector:[selectedItem action] withObject:selectedItem];
-		[itemsTable reloadData];
 	}
 }
 
 - (void)upTime {
 	timeHovering += 0.1;
+	
+	if (mouseOverRow != -1 && [[menuItems objectAtIndex:mouseOverRow] submenu] != nil && itemWithOpenSubmenu == nil && timeHovering >= 0.1) {
+	//	[self performSelector:@selector(displaySubmenuForRow:) withObject:[NSNumber numberWithInt:mouseOverRow] afterDelay:0.1];
+		[self displaySubmenuForRow:[NSNumber numberWithInt:mouseOverRow]];
+	}
 }
 
 - (void)escapeKeyPressed {
@@ -492,9 +584,14 @@
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {		
+	//NSLog(@"row index %i. time hovering %f", rowIndex, timeHovering);
+	
 	if (timeHovering > 1 && rowIndex == mouseOverRow && isSelecting == NO) {
+	//	NSLog(@"RETURN AND STOP --------------------------------------------------------");
 		return;
 	}
+	
+	//NSLog(@"willdisplaycell");
 	
 	JGMenuItem *item = [menuItems objectAtIndex:rowIndex];
 		

@@ -25,6 +25,8 @@
 
 @end
 
+@class JGMenuItem;
+
 @interface JGMenuWindowController : NSWindowController <NSWindowDelegate, TableDetectionDelegate> {	
 	@private /* PRIVATE VARIABLES */
 	
@@ -40,6 +42,10 @@
 	
 	float timeHovering; // PRIVATE: Amount of time hovering on a single point USED TO PREVENT DRAWING ISSUE
 	BOOL isSelecting; // PRIVATE: Whether or not is selecting
+	
+	JGMenuItem *itemWithOpenSubmenu;
+	JGMenuWindowController *parentMenu; 
+	BOOL isMovingBackToParent;
 	
 	@public
 	
@@ -66,6 +72,9 @@
 @property (nonatomic, copy) NSString *statusItemTitle;
 @property (nonatomic, assign) BOOL isStatusItem;
 @property (nonatomic, assign) BOOL proMode;
+@property (nonatomic, retain) JGMenuWindowController *parentMenu; // PRIVATE: Even though this is a property it should only be accessed by another menu controller
+@property (nonatomic, assign) int mouseOverRow; // PRIVATE: Even though this is a property it should only be accessed by another menu controller
+
 
 - (void)highlightMenuItemAtIndex:(int)rowIndex; // Forcefully highlight a menu item
 - (void)closeWindow; // Close window with fade out

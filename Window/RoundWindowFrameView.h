@@ -17,7 +17,7 @@
 @protocol TableDetectionDelegate <NSObject>
 
 - (void)mouseMovedIntoLocation:(NSPoint)loc;
-- (void)mouseMovedOutOfView;
+- (void)mouseMovedOutOfViewToLoc:(NSPoint)loc;
 - (void)mouseDownAtLocation:(NSPoint)loc;
 - (void)escapeKeyPressed;
 
@@ -30,10 +30,15 @@
 	id <TableDetectionDelegate> tableDelegate;
 	BOOL allCornersRounded;
 	BOOL proMode;
+	
+	BOOL _isSubmenu;
+	int _submenuSide;
 }
 
 @property (nonatomic, retain) id <TableDetectionDelegate> tableDelegate;
 @property (nonatomic, assign) BOOL allCornersRounded;
 @property (nonatomic, assign) BOOL proMode;
+
+- (void)setIsSubmenuOnSide:(int)side; // 0 == left. 1 == right.
 
 @end

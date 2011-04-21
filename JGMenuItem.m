@@ -9,7 +9,7 @@
 #import "JGMenuItem.h"
 
 @implementation JGMenuItem
-@synthesize title, target, action, enabled;
+@synthesize title, target, action, enabled, submenu;
 @dynamic image;
 
 - (id)initWithTitle:(NSString *)str target:(id)trg action:(SEL)act {

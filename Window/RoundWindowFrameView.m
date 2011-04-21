@@ -34,6 +34,10 @@
 		
 		if (allCornersRounded)
 			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5];
+		else if (_isSubmenu && _submenuSide == 0)
+			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner | OSTopLeftCorner];
+		else if (_isSubmenu && _submenuSide == 1)
+			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner | OSTopRightCorner];
 		else
 			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner];
 		
@@ -70,6 +74,12 @@
 	[self setNeedsDisplay:YES];
 }
 
+- (void)setIsSubmenuOnSide:(int)side {
+	_isSubmenu = YES;
+	_submenuSide = side;
+	[self setNeedsDisplay:YES];
+}
+
 - (BOOL)proMode {
 	return proMode;
 }
@@ -85,12 +95,12 @@
 {
 	NSPoint location = [theEvent locationInWindow];
 	
-	if (location.x > 0 && location.y > 0) {
+	if (location.x > 0 && location.y > 0 && location.x < self.frame.size.width && location.y < self.frame.size.height) {
 		if ([tableDelegate respondsToSelector:@selector(mouseMovedIntoLocation:)])
 			 [tableDelegate mouseMovedIntoLocation:location];	
 	} else {
-		if ([tableDelegate respondsToSelector:@selector(mouseMovedOutOfView)])
-			[tableDelegate mouseMovedOutOfView];	
+		if ([tableDelegate respondsToSelector:@selector(mouseMovedOutOfViewToLoc:)])
+			[tableDelegate mouseMovedOutOfViewToLoc:location];	
 	}
 }
 
