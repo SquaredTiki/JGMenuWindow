@@ -82,7 +82,8 @@
 	BOOL side = ![self loadHeightsWithWindowOrigin:point whichIsSubmenu:YES]; // Returns 0 = right while we want 0 = left
 	NSLog(@"side = %i", side);
 	[(RoundWindowFrameView *)[[self.window contentView] superview] setIsSubmenuOnSide:side];
-	[(RoundWindowFrameView *)[[self.window contentView] superview] setProMode:proMode];
+	[self setProMode:parentMenu.proMode]; // Respects parent's style
+	[(RoundWindowFrameView *)[[self.window contentView] superview] setProMode:proMode]; 
 	[self.window makeKeyAndOrderFront:self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
@@ -673,6 +674,67 @@
 
 		if (proMode)
 			[aCell setTextColor:[NSColor whiteColor]];
+	} 
+	
+	// Draw Disclosure Indicator for items with submenu
+	
+	if (item.submenu != nil && mouseOverRow != rowIndex) {
+		// Not highlighted
+		NSRect rowRect = [aTableView rectOfRow:rowIndex];
+		CGPoint originToDrawFrom =  CGPointMake(rowRect.origin.x + headerView.frame.size.width - 20, NSMidY(rowRect) - 5); // Bottom left origin. Uses headerView width because rowRect width does not stay constant
+		CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
+		
+		CGContextSetRGBStrokeColor(context, 0.3, 0.6, 1.0, 1.0);
+		CGContextSetRGBFillColor(context, 0.3, 0.6, 1.0, 1.0);
+		CGContextSetLineWidth(context, 2.0);
+		CGContextMoveToPoint(context, 10.0, 30.0);
+		
+		CGPoint addLines[] =
+		{
+			CGPointMake(originToDrawFrom.x, originToDrawFrom.y),
+			CGPointMake(originToDrawFrom.x, originToDrawFrom.y + 10.0),
+			CGPointMake(originToDrawFrom.x + 1.0, originToDrawFrom.y + 10.0),
+			CGPointMake(originToDrawFrom.x + 8.0, originToDrawFrom.y + 5.0),
+			CGPointMake(originToDrawFrom.x + 1.0, originToDrawFrom.y),
+			CGPointMake(originToDrawFrom.x, originToDrawFrom.y),
+		};		
+		CGContextAddLines(context, addLines, sizeof(addLines)/sizeof(addLines[0]));
+		
+		if (!proMode)
+			[[NSColor colorWithDeviceRed:0.424 green:0.424 blue:0.427 alpha:1.000] setFill];
+		else
+			[[NSColor colorWithDeviceWhite:0.761 alpha:1.000] setFill];
+			
+		CGContextDrawPath(context, kCGPathFill);
+	} else if (item.submenu != nil && mouseOverRow == rowIndex) {
+		// Highlighted	
+		NSRect rowRect = [aTableView rectOfRow:rowIndex];
+		CGPoint originToDrawFrom =  CGPointMake(rowRect.origin.x + headerView.frame.size.width - 20, NSMidY(rowRect) - 5); // Bottom left origin. Uses headerView width because rowRect width does not stay constant
+		
+		CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
+		
+		CGContextSetRGBStrokeColor(context, 0.3, 0.6, 1.0, 1.0);
+		CGContextSetRGBFillColor(context, 0.3, 0.6, 1.0, 1.0);
+		CGContextSetLineWidth(context, 2.0);
+		CGContextMoveToPoint(context, 10.0, 30.0);
+		
+		CGPoint addLines[] =
+		{
+			CGPointMake(originToDrawFrom.x, originToDrawFrom.y),
+			CGPointMake(originToDrawFrom.x, originToDrawFrom.y + 10.0),
+			CGPointMake(originToDrawFrom.x + 1.0, originToDrawFrom.y + 10.0),
+			CGPointMake(originToDrawFrom.x + 8.0, originToDrawFrom.y + 5.0),
+			CGPointMake(originToDrawFrom.x + 1.0, originToDrawFrom.y),
+			CGPointMake(originToDrawFrom.x, originToDrawFrom.y),
+		};		
+		CGContextAddLines(context, addLines, sizeof(addLines)/sizeof(addLines[0]));
+		
+		if (!proMode)
+			[[NSColor whiteColor] setFill];
+		else 
+			[[NSColor colorWithDeviceWhite:0.255 alpha:1.000] setFill];
+			
+		CGContextDrawPath(context, kCGPathFill);
 	}
 		
 	// Now Draw Image

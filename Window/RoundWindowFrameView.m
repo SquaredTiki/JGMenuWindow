@@ -52,9 +52,13 @@
 		
 		if (allCornersRounded)
 			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5];
+		else if (_isSubmenu && _submenuSide == 0)
+			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner | OSTopLeftCorner];
+		else if (_isSubmenu && _submenuSide == 1)
+			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner | OSTopRightCorner];
 		else
 			path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:5 inCorners:OSBottomLeftCorner | OSBottomRightCorner];
-
+		
 		NSGradient* aGradient = [[[NSGradient alloc] initWithColorsAndLocations:
 								  [NSColor colorWithDeviceWhite:0 alpha:0.97], (CGFloat)0.0,
 								  [NSColor colorWithDeviceWhite:0 alpha:0.97], (CGFloat)1.0,
