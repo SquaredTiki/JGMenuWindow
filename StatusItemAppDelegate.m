@@ -14,12 +14,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	menuController = [[[JGMenuWindowController alloc] initWithWindowNibName:@"JGMenuWindow"] retain];
-//	[menuController setHeaderView:customView];
+	[menuController setHeaderView:customView];
 	[menuController setMenuDelegate:self];
 	[menuController setStatusItemTitle:@"Search"];
 //	[menuController setStatusItemImage:[NSImage imageNamed:@"img.png"]];
 	
-	NSMutableArray *items = [[NSMutableArray alloc] init];
+/*	NSMutableArray *items = [[NSMutableArray alloc] init];
 	for (int i = 0; i < 6; i++) {
 		if (i==3)
 			[items addObject:[JGMenuItem seperatorItem]];
@@ -39,7 +39,7 @@
 		}
 		[items addObject:menuItem];
 	} 
-	[menuController setMenuItems:items];
+	[menuController setMenuItems:items]; */
 }
 
 #pragma mark Showing and Hiding Table
@@ -104,16 +104,16 @@
 #pragma mark NSControlTextEditingDelegate
 
 - (BOOL)control:(NSControl *)control textShouldBeginEditing:(NSText *)fieldEditor {
-	if (![searchField.stringValue isEqualToString:@""]) {
+	if (![searchField.stringValue isEqualToString:@""] && [searchField.stringValue length] <= 1) {
 		[self showTableView];
 	}
 	return YES;
 }
 
 - (void)controlTextDidChange:(NSNotification *)obj {
-	if (![searchField.stringValue isEqualToString:@""]) {
+	if (![searchField.stringValue isEqualToString:@""] && [searchField.stringValue length] <= 1) {
 		[self showTableView];
-	} else {
+	} else if ([searchField.stringValue isEqualToString:@""]) {
 		[self hideTableView];
 	}
 }

@@ -34,4 +34,4 @@ As this was only a quick project there are some limitations:
 
 # Screenshot
 
-![Screen](http://a.yfrog.com/img610/825/66pd.png)
+![Screen](http://idzr.org/xd4e)
