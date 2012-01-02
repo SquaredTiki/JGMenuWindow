@@ -1,4 +1,4 @@
-# JGWindowMenu
+# JGMenuWindow
 
 The main aim of this project was to create a `NSWindow` and `NSTableView` with the appearance of a normal `NSMenu`. The benefits of this means that you can have a text field in what appears to be an `NSMenu`.
 
@@ -35,3 +35,7 @@ As this was only a quick project there are some limitations:
 # Screenshot
 
 ![Screen](http://idzr.org/xd4e)
+
+# Attribution
+
+If you are using JGMenuWindow in your project please make sure you leave credit where credit is due.
